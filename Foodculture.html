@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fly Nest - Food Culture</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap"
+            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="Foodculture.css" />
+    </head>
+    <body>
+        <div class="section 1">
+            <div class="navbar-container">
+                <input type="checkbox" id="menu-toggle-input" class="menu-checkbox" />
+                <div class="navbar-header">Fly Nest</div>
+                <label for="menu-toggle-input" class="mobile-menu-icon">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <nav class="navbar-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="Foodculture.html">Food Culture</a></li>
+                        <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                        <li><a href="tips.html">Travel Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="food-showcase-section">
+            <div class="container">
+                <div class="carousel">
+                    <img class="header-image active" src="picture/China.jpg" alt="Cityscape" />
+                    <img class="header-image" src="picture/Japan.jpg" alt="Beijing Duck" />
+                    <img class="header-image" src="picture/Korea.jpg" alt="Mapo Tofu" />
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2 class="country-title" style="font-size: 30px; color: #004369">China</h2>
+
+                <div class="china-grid">
+                    <!-- Hot Pot（左边大图） -->
+                    <a href="China.html#hotpot" class="food-link hotpot">
+                        <div class="food-item">
+                            <img class="food-image" src="picture/China hot pot.webp" alt="Hot Pot" />
+                            <div class="food-name">
+                                <span>Hot Pot</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Dan Dan Noodles（中上） -->
+                    <a href="China.html#dandan" class="food-link">
+                        <div class="food-item">
+                            <img class="food-image" src="picture/China dandan.jpg" alt="Dan Dan Noodles" />
+                            <div class="food-name">
+                                <span>Dan Dan Noodles</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Mapo Tofu（中下） -->
+                    <a href="China.html#mapo" class="food-link">
+                        <div class="food-item">
+                            <img class="food-image" src="picture/China mapo tofu.jpg" alt="Mapo Tofu" />
+                            <div class="food-name">
+                                <span>Mapo Tofu</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Beijing Roast Duck（右边大图） -->
+                    <a href="China.html#Beijing" class="food-link duck">
+                        <div class="food-item">
+                            <img class="food-image" src="picture/China Kaoya.jpg" alt="Beijing Roast Duck" />
+                            <div class="food-name">
+                                <span>Beijing Roast Duck</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- China Mobile Slider -->
+                <div class="mobile-slider">
+                    <div class="slider-track">
+                        <a href="China.html#hotpot"><img src="picture/China hot pot.webp" alt="Hot Pot" /></a>
+                        <a href="China.html#dandan"><img src="picture/China dandan.jpg" alt="Dan Dan" /></a>
+                        <a href="China.html#mapo"><img src="picture/China mapo tofu.jpg" alt="Mapo Tofu" /></a>
+                        <a href="China.html#Beijing"><img src="picture/China Kaoya.jpg" alt="Beijing Duck" /></a>
+                    </div>
+                    <button class="arrow-next">›</button>
+                </div>
+
+                <h2 class="country-title" style="font-size: 30px; color: #004369">Japan</h2>
+
+                <div class="japan-grid">
+                    <div class="japan-left">
+                        <a href="Japan.html#Sushi" class="food-link">
+                            <div class="food-item">
+                                <img class="food-image" src="picture/Japan sushi.webp" alt="Sushi" />
+                                <div class="food-name">
+                                    <span style="color: #004369">Sushi</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="Japan.html#Takoyaki" class="food-link">
+                            <div class="food-item">
+                                <img class="food-image" src="picture/Japan takoyaki.webp" alt="Takoyaki" />
+                                <div class="food-name">
+                                    <span style="color: #004369">Takoyaki</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <a href="Japan.html#Tempura" class="food-link japan-right-large">
+                        <div class="food-item japan-right-large">
+                            <img class="food-image" src="picture/Japan tempura.jpg" alt="Tempura" />
+                            <div class="food-name">
+                                <span style="color: #004369">Tempura</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="mobile-slider">
+                    <div class="slider-track">
+                        <a href="Japan.html#Sushi"><img src="picture/Japan sushi.webp" alt="Sushi" /></a>
+                        <a href="Japan.html#Takoyaki"><img src="picture/Japan takoyaki.webp" alt="Takoyaki" /></a>
+                        <a href="Japan.html#Tempura"><img src="picture/Japan tempura.jpg" alt="Tempura" /></a>
+                    </div>
+                    <button class="arrow-next">›</button>
+                </div>
+
+                <h2 class="country-title" style="font-size: 30px; color: #004369">Korea</h2>
+
+                <div class="korea-grid">
+                    <a href="Korea.html#Koreabbq" class="food-link korea-left-large">
+                        <div class="food-item korea-left-large">
+                            <img class="food-image" src="picture/Korea bbq.jpg" alt="Korean BBQ" />
+                            <div class="food-name">
+                                <span style="color: #004369">Korean BBQ</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="korea-right">
+                        <a href="Korea.html#Tteokbokki" class="food-link">
+                            <div class="food-item">
+                                <img class="food-image" src="picture/Korea tteokbokki.webp" alt="Tteokbokki" />
+                                <div class="food-name">
+                                    <span style="color: #004369">Tteokbokki</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="Korea.html#Budae" class="food-link">
+                            <div class="food-item">
+                                <img class="food-image" src="picture/Korea Budae Jjigae.jpg" alt="Budae Jjigae" />
+                                <div class="food-name">
+                                    <span style="color: #004369">Budae Jjigae</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-slider korea-slider">
+            <div class="slider-track">
+                <a href="Korea.html#Koreabbq"><img src="picture/Korea bbq.jpg" alt="Korean BBQ" /></a>
+                <a href="Korea.html#Tteokbokki"><img src="picture/Korea tteokbokki.webp" alt="Tteokbokki" /></a>
+                <a href="Korea.html#Budae"><img src="picture/Korea Budae Jjigae.jpg" alt="Budae Jjigae" /></a>
+            </div>
+            <button class="arrow-next">›</button>
+        </div>
+
+        <div class="modal-overlay" id="contactModal">
+            <div class="modal-box">
+                <span class="close-x" id="closeX">&times;</span>
+                <h2 class="title">Contact us</h2>
+
+                <div class="form-group">
+                    <label>Name :</label>
+                    <input type="text" id="nameInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email :</label>
+                    <input type="email" id="emailInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea rows="4" id="messageInput"></textarea>
+                </div>
+
+                <div class="submit-container">
+                    <div class="submit-arrow" id="submitAndExit">➔</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Thanks for travelling with us ♡</p>
+            <p>We collect stories, cities, and food around the world just to make your trip easier and happier.</p>
+            <button class="contact-btn" id="openContact">Contact Us</button>
+            <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+        </footer>
+
+        <script>
+            const modal = document.getElementById("contactModal");
+            const openBtn = document.getElementById("openContact");
+            const closeX = document.getElementById("closeX");
+            const exitArrow = document.getElementById("submitAndExit");
+
+            openBtn.onclick = () => modal.classList.add("active");
+            closeX.onclick = () => modal.classList.remove("active");
+
+            // 点击箭头就退出
+            exitArrow.onclick = function () {
+                modal.classList.remove("active");
+                // 提交后清空，保持整洁
+                document.querySelectorAll(".form-group input, .form-group textarea").forEach((el) => (el.value = ""));
+            };
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+            integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+
+        <div
+            class="modal fade"
+            id="ContactUsModal"
+            tabindex="-1"
+            aria-labelledby="ContactUsModalLabel"
+            aria-hidden="true"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="border: none; background-color: transparent">
+                    <div class="modal-body" style="background-color: #a8dbdc; padding: 40px; border-radius: 0">
+                        <div
+                            class="modal-header"
+                            style="
+                                border-bottom: none;
+                                padding: 0 0 30px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            ">
+                            <h5
+                                class="modal-title"
+                                id="ContactUsModalLabel"
+                                style="color: #004369; font-size: 1.8em; font-weight: bold">
+                                Contact us
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                                style="filter: invert(10%)"></button>
+                        </div>
+
+                        <form id="ContactForm">
+                            <div class="mb-4">
+                                <label
+                                    for="Name"
+                                    class="form-label"
+                                    style="color: #004369; font-weight: normal; margin-bottom: 5px"
+                                    >Name :</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="Name"
+                                    style="background-color: #fff8ee; border: none; padding: 15px; height: 50px" />
+                            </div>
+
+                            <div class="mb-4">
+                                <label
+                                    for="Email"
+                                    class="form-label"
+                                    style="color: #004369; font-weight: normal; margin-bottom: 5px"
+                                    >Email :</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="Email"
+                                    placeholder=""
+                                    style="background-color: #fff8ee; border: none; padding: 15px; height: 50px" />
+                            </div>
+
+                            <div class="mb-4">
+                                <label
+                                    for="Message"
+                                    class="form-label"
+                                    style="color: #04369c; font-weight: normal; margin-bottom: 5px"
+                                    >Message:</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="Message"
+                                    rows="5"
+                                    style="
+                                        background-color: #fff8ee;
+                                        border: none;
+                                        padding: 15px;
+                                        min-height: 200px;
+                                        resize: none;
+                                    "></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+            integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+
+        <script>
+            const images = document.querySelectorAll(".carousel img");
+            const dots = document.querySelectorAll(".dot");
+            let current = 0;
+
+            function showSlide(index) {
+                images.forEach((img, i) => img.classList.toggle("active", i === index));
+                dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+                current = index;
+            }
+
+            function nextSlide() {
+                const next = (current + 1) % images.length;
+                showSlide(next);
+            }
+
+            // 自动切换图片，每 3 秒
+            setInterval(nextSlide, 3000);
+
+            // 点击圆点切换
+            dots.forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
+        </script>
+
+        <script>
+            document.querySelectorAll(".mobile-slider").forEach((slider) => {
+                const track = slider.querySelector(".slider-track");
+                const slides = track.children;
+                const nextBtn = slider.querySelector(".arrow-next");
+                let index = 0;
+
+                nextBtn.onclick = () => {
+                    index = (index + 1) % slides.length;
+                    track.style.transform = `translateX(-${index * 100}%)`;
+                };
+            });
+        </script>
+    </body>
+</html>

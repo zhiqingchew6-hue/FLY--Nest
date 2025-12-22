@@ -1,0 +1,662 @@
+body {
+    background-color: #fff8ee;
+}
+
+.section\ 1 { /* 注意：HTML中使用了空格，但CSS中通常需要转义或使用更安全的类名 */
+    width: 100%;
+}
+/* 如果上面不工作，使用更强的选择器或直接针对 .navbar-container */
+
+.navbar-container {
+    background-color: #CCEFF7; 
+    width: 100%; /* 确保它占据父元素的全部宽度 */
+    height: 180px;
+    text-align: center;
+}
+.navbar-header {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 60px; 
+    font-weight: 700;
+    color: #004369; 
+    margin-bottom: 40px;
+}
+.navbar-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.navbar-links a {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 24px; 
+    font-weight: 500; 
+    color: #004369; 
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    border-radius: 30px;
+}
+.navbar-links a:hover {
+    background-color: #A8DBDC;
+    cursor: pointer;
+}
+.navbar-links a:active {
+    background-color: #A8DBDC; 
+}
+#menu-toggle-input {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    /* 强制 Header 高度 */
+    .navbar-container {
+        height: 80px !important;
+        background-color: #CCEFF7;
+        position: relative; /* 关键：让按钮相对于这里定位 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 隐藏 Checkbox */
+    .menu-checkbox {
+        display: none;
+    }
+
+    /* 标题样式 */
+    .navbar-header {
+        font-size: 32px !important;
+        margin: 0 !important;
+        color: #004369;
+    }
+
+    /* 重新定位三横线按钮到右上角 */
+    .mobile-menu-icon {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        right: 20px; /* 距离右边 20px */
+        top: 30px; /* 距离顶部 30px，手动对齐标题 */
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .mobile-menu-icon span {
+        width: 100%;
+        height: 3px;
+        background-color: #004369;
+        border-radius: 3px;
+    }
+
+    /* 侧边菜单样式 */
+    .navbar-links {
+        display: none; /* 默认隐藏 */
+        position: absolute;
+        top: 80px; /* 紧贴 Header 下方 */
+        right: 0;
+        width: 50%; /* 占据右侧一半 */
+        background-color: #CCEFF7;
+        z-index: 1001;
+        box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 当 Checkbox 被勾选时显示菜单 */
+    .menu-checkbox:checked ~ .navbar-links {
+        display: block !important;
+    }
+
+    /* 菜单内部列表垂直排列 */
+    .navbar-links ul {
+        flex-direction: column !important;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .navbar-links li {
+        width: 100%;
+    }
+
+    .navbar-links a {
+        display: block;
+        padding: 15px 20px;
+        text-align: left;
+        color: #004369;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    /* 1. 缩小 Fly Nest 字体 */
+    .navbar-header {
+        font-size: 26px !important; /* 从 32px 降到 26px，显得更精致 */
+        font-weight: 700;
+        color: #004369;
+    }
+
+    /* 2. 菜单链接的 Hover 效果 */
+    .navbar-links a {
+        display: block;
+        padding: 15px 20px;
+        color: #004369;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease; /* 让变色更平滑 */
+    }
+
+    /* 当鼠标指着（Hover）或者点击（Active）时变色 */
+    .navbar-links a:hover {
+        background-color: #A8DBDC; /* 变成浅蓝色，匹配你之前的设计 */
+        color: #004369;
+    }
+}
+
+/* --- 桌面端样式 (电脑) --- */
+@media screen and (min-width: 769px) {
+    /* 确保电脑端的标题大小适中 */
+    .navbar-header {
+        font-size: 50px; 
+    }
+
+    /* 电脑端导航链接的 Hover 效果 */
+    .navbar-links a:hover {
+        background-color: #A8DBDC;
+        color: #004369;
+    }
+    .mobile-menu-icon {
+        display: none;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: #fff8ee;
+}
+
+.destination-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+/* ===== Title ===== */
+.city-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: #004369;
+}
+
+.sub-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #004369;
+}
+
+.rating {
+    color: #004369;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.section-image {
+    margin: 30px 0;
+    margin-bottom: 80px;
+}
+
+/* 所有图片统一风格 */
+.section-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    display: block;
+}
+
+/* =========================
+   Desktop Layout (Grid)
+========================= */
+@media (min-width: 992px) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    /* 左边两张小图 */
+    .image-grid .img-small {
+        height: 100%;
+    }
+    .image-grid img {
+        aspect-ratio: 4 / 3;
+    }
+
+    /* 右边大图（吃两行） */
+    .image-grid .img-large {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        aspect-ratio: 2 / 3;
+    }
+}
+
+/* =========================
+   Mobile Carousel
+========================= */
+@media (max-width: 991px) {
+    .image-grid {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 15px;
+    }
+
+    .image-grid img {
+        flex: 0 0 85%;
+        height: 350px;
+        scroll-snap-align: center;
+    }
+
+    /* 隐藏滚动条 */
+    .image-grid::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ===== Info Nav ===== */
+.info-nav {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 30px;
+}
+.mobile-dropdown-btn {
+    display: none; /* 电脑版隐藏这个按钮 */
+    position: relative;
+    z-index: 1002;
+}
+
+.arrow-icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+.info-nav a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #004369;
+    text-decoration: none;
+}
+/* 默认隐藏手机版切换器 */
+.mobile-nav-toggle {
+    display: none;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #004369;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-down {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .info-nav {
+        display: block; /* 【关键修改】防止按钮和内容横向挤在一起 */
+    }
+    /* 1. 显示带箭头的按钮 */
+    .mobile-dropdown-btn {
+        display: flex; /* 手机版显示按钮 */
+        align-items: center;
+        gap: 10px;
+        font-size: 28px;
+        font-weight: 700;
+        color: #004369;
+        cursor: pointer;
+        padding: 10px 0;
+        width: fit-content;
+    }
+
+    .nav-links {
+        display: none; /* 默认隐藏 */
+        position: absolute; /* 悬浮显示，不挤压下方文字 */
+        top: 50px;
+        left: 0;
+        background-color: #a2d9d9;
+        width: 240px;
+        flex-direction: column; /* 纵排链接 */
+        gap: 0; /* 手机版不需要间隔 */
+        border-radius: 10px;
+        z-index: 1001;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        padding: 5px 0;
+    }
+
+    /* 菜单激活状态 */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        font-size: 18px !important; /* 强制覆盖电脑版的大字 */
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(0, 67, 105, 0.1);
+        display: block;
+        width: 100%;
+    }
+    .arrow-icon {
+        display: inline-block;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    /* 下拉菜单打开时旋转箭头 */
+    .nav-links.active ~ .mobile-dropdown-btn .arrow-icon,
+    .mobile-dropdown-btn.active .arrow-icon {
+        transform: rotate(90deg); /* ▶ → ▼ */
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ===== Paragraph ===== */
+.info-section p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #004369;
+    margin-bottom: 40px;
+}
+
+/* ===== Hotels ===== */
+.section-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #004369;
+}
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.hotel-card img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.hotel-card p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: #004369;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .hotel-grid {
+        /* 取消网格，改为不换行的弹性盒子 */
+        display: flex;
+        overflow-x: auto; /* 允许横向滚动 */
+        scroll-snap-type: x mandatory; /* 开启滚动吸附感 */
+        gap: 20px;
+        padding-bottom: 15px; /* 留出滚动条空间或美感空间 */
+        
+        /* 隐藏滚动条 (可选) */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    /* 隐藏 Chrome/Safari 的滚动条 */
+    .hotel-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hotel-card {
+        /* 核心：让每个卡片占据几乎整个屏幕宽度 */
+        flex: 0 0 85%; /* 85% 宽度可以让用户看到下一张的一点边缘，提示可以滑动 */
+        scroll-snap-align: center; /* 每次滑动停止时，卡片居中 */
+    }
+
+    .hotel-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.food-section {
+    background-color: #fff8ee;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    width: 400%;
+    height: 600px;
+    animation: slide-show 15s infinite ease-in-out;
+}
+
+.carousel-slide {
+    width: 25%;
+}
+
+/* 图片本身的样式 */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 30px;
+}
+
+@keyframes slide-show {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    95% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .carousel-container {
+        height: 260px;   /* ✅ 手机合理高度 */
+        width: 400%;
+    }
+
+    .carousel-slide img {
+        border-radius: 20px; /* 手机圆角小一点更好看 */
+    }
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+    display: block;
+    margin: 62px 0;
+    text-align: right;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: #004369;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+
+    .back-btn {     
+        display: flex;        /* 使用 flex 方便对齐 */
+        justify-content: flex-end; /* 强制内容对齐到右侧 */
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .back-icon {
+        display: inline-block;
+        font-size: 28px;
+    }
+
+    .back-text {
+        display: none;
+    }
+}
+
+:root {
+    --navy: #004369; /* 主要字体与深色 */
+    --cream: #fff8ee; /* 页面底色 */
+    --teal: #a8dbdc; /* Food卡片背景 & 弹窗背景 */
+    --sky: #cceff7; /* Header & Footer 背景 */
+}
+
+
+/* ================== Footer ================== */
+footer {
+    background-color: var(--sky);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--navy);
+}
+
+/* ================== Contact Button ================== */
+.contact-btn {
+    background-color: var(--teal);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: var(--navy);
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* ================== Modal ================== */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+    background-color: var(--teal);
+    width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    color: var(--navy);
+}
+
+
+.close-x {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 30px; cursor: pointer;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+.form-group input,
+.form-group textarea {
+    background-color: var(--cream);
+    color: var(--teal);
+}
+
+
+.submit-container { display: flex; justify-content: flex-end; margin-top: 10px; }
+.submit-arrow {
+    width: 40px; height: 40px; border: 2px solid var(--navy); border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 20px;
+}
+
+.modal-content {
+    background-color: var(--teal) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-box {
+        width: 90%;        /* 占屏幕 90% */
+        padding: 20px;     /* 缩小内边距 */
+    }
+}
+/* ================== Contact Modal 标题 ================== */
+.contact-modal .modal-title {
+    text-align: center;       /* 标题居中 */
+    color: var(--navy);       /* 文字颜色 */
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+/* ================== Contact Modal 表单文字 ================== */
+.contact-modal .form-group label,
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    color: var(--navy);       /* 全部文字颜色改为 --navy */
+}
+
+/* ================== Contact Modal 输入框背景调整（可选） ================== */
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    background-color: var(--cream);  /* 背景保持浅色 */
+}
+.contact-modal .modal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: bold;
+}

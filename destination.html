@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fly Nest</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" href="destination.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="destination.css" />
+    </head>
+    <body>
+        <div class="section 1">
+            <div class="navbar-container">
+                <input type="checkbox" id="menu-toggle-input" class="menu-checkbox" />
+                <div class="navbar-header">Fly Nest</div>
+                <label for="menu-toggle-input" class="mobile-menu-icon">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <nav class="navbar-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="Foodculture.html">Food Culture</a></li>
+                        <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                        <li><a href="tips.html">Travel Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="picture/guangzhuo%20canton%20tower.jpg" alt="Carousel Image 1" />
+                </div>
+                <div class="carousel-slide">
+                    <img src="picture/HongKong.jpg" alt="Carousel Image 2" />
+                </div>
+                <div class="carousel-slide">
+                    <img src="picture/forbidden%20city%201.jpg" alt="Carousel Image 3" />
+                </div>
+                <div class="carousel-slide">
+                    <img src="picture/Jeju-Island%201.jpg" alt="Carousel Image 4" />
+                </div>
+            </div>
+        </div>
+
+        <main class="main-content"></main>
+        <div class="section3">
+            <h2 class="section-title">Popular Attractions</h2>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-control prev" onclick="scrollCarousel(-1)">&#10094;</button>
+
+                <div class="popular-attractions-grid" id="attractions-carousel">
+                    <div class="attraction-card">
+                        <img src="picture/canton%20tower%202.jpg" alt="[Placeholder Image 1]" />
+                        <div class="card-details">
+                            <span class="rank-number-inline">1</span>
+
+                            <div class="text-group">
+                                <h3>GuangZhou</h3>
+                                <ul class="link">
+                                    <li><a href="cantontower.html" class="link">Canton Tower</a></li>
+                                </ul>
+                            </div>
+                            <p class="rating-group">
+                                <span class="rating-score">5.0</span>
+                                <span class="stars">★★★★★</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <img src="picture/tokyo%20skytree%201.jpg" alt="[Placeholder Image 2]" />
+                        <div class="card-details">
+                            <span class="rank-number-inline">2</span>
+                            <div class="text-group">
+                                <h3>Tokyo</h3>
+                                <ul class="link">
+                                    <li><a href="Tokyoskytree.html" class="link">Tokyo Skytree</a></li>
+                                </ul>
+                            </div>
+                            <p class="rating-group">
+                                <span class="rating-score">5.0</span>
+                                <span class="stars">★★★★★</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <img src="picture3/mueongdong-3.jpg" alt="[Placeholder Image 3]" />
+                        <div class="card-details">
+                            <span class="rank-number-inline">3</span>
+                            <div class="text-group">
+                                <h3>Seoul</h3>
+                                <ul class="link">
+                                    <li><a href="Myeongdong.html" class="link">Myeongdong</a></li>
+                                </ul>
+                            </div>
+                            <p class="rating-group">
+                                <span class="rating-score">4.0</span>
+                                <span class="stars">★★★★</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <img src="picture/the%20bund%201.jpg" alt="[Placeholder Image 4]" />
+                        <div class="card-details">
+                            <span class="rank-number-inline">4</span>
+                            <div class="text-group">
+                                <h3>ShangHai</h3>
+                                <ul class="link">
+                                    <li><a href="TheBund.html" class="link">The Bund</a></li>
+                                </ul>
+                            </div>
+                            <p class="rating-group">
+                                <span class="rating-score">4.0</span>
+                                <span class="stars">★★★★</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <img src="picture/Haeundae%20Beach.jpg" alt="[Placeholder Image 5]" />
+                        <div class="card-details">
+                            <span class="rank-number-inline">5</span>
+                            <div class="text-group">
+                                <h3>Busan</h3>
+                                <ul class="link">
+                                    <li><a href="Haeundaebeach.html" class="link">Haeundae Beach</a></li>
+                                </ul>
+                            </div>
+                            <p class="rating-group">
+                                <span class="rating-score">3.0</span>
+                                <span class="stars">★★★</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control next" onclick="scrollCarousel(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <script>
+            const carousel = document.getElementById("attractions-carousel");
+
+            function scrollCarousel(direction) {
+                const scrollAmount = 350 * direction;
+                carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            }
+        </script>
+
+        <div class="destination-page">
+            <section id="section-4" class="country-buttons-container">
+                <a href="#section5-china" class="country-button active">China</a>
+                <a href="#section6-japan" class="country-button">Japan</a>
+                <a href="#section7-Korea" class="country-button">Korea</a>
+            </section>
+
+            <section id="section5-china" class="country-section china-section">
+                <div class="country-header">
+                    <img src="picture/china%20icon.png" alt="China Flag Icon" class="flag-icon" />
+                    <h2 class="country-name">China</h2>
+                </div>
+
+                <div class="city-card-grid">
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/shanghai.jpg" alt="Shanghai Skyline" />
+                        </div>
+
+                        <div class="details-item">
+                            <h3 class="city-name-small" onclick="toggleMenu(event, this)">
+                                Shanghai <span class="mobile-arrow">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="TheBund.html" class="attraction-link">The Bund</a></li>
+                                <li><a href="YuGarden.html" class="attraction-link">Yu Garden</a></li>
+                                <li><a href="Disneyland.html" class="attraction-link">Shanghai Disneyland</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/HongKong.jpg" alt="Hongkong Lights" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Hongkong <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="VictoriaHarbour.html" class="attraction-link">Victoria Harbour</a></li>
+                                <li><a href="OceanPark.html" class="attraction-link">Ocean Park</a></li>
+                                <li><a href="CheungChau.html" class="attraction-link">Cheung Chau</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/beijing.jpg" alt="Beijing Temple of Heaven" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Beijing <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="Theforbiddencity.html" class="attraction-link">The forbidden city</a></li>
+                                <li><a href="SummerPalace.html" class="attraction-link">Summer Palace</a></li>
+                                <li><a href="798ArtDistrict.html" class="attraction-link">798 Art District</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/Guangzhuo%201.jpg" alt="Hongkong Lights" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                GuangZhuo <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="cantontower.html" class="attraction-link">Canton Tower</a></li>
+                                <li><a href="OperaHouse.html" class="attraction-link">Guangzhou Opera House</a></li>
+                                <li><a href="HuachengSquare.html" class="attraction-link">Huacheng Square</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section6-japan" class="country-section china-section">
+                <div class="country-header">
+                    <img src="picture/japan%20icon.png" alt="Japan Flag Icon" class="flag-icon" />
+                    <h2 class="country-name">Japan</h2>
+                </div>
+
+                <div class="city-card-grid">
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/Hokkaido%201.jpg" alt="Shanghai Skyline" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Hokkaido <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="OdoriPark.html" class="attraction-link">Odori Park, Sappora</a></li>
+                                <li><a href="OtaruCanal.html" class="attraction-link">Otaru Canal</a></li>
+                                <li><a href="Furano.html" class="attraction-link">Furano & Biei Flower Fields</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture3/Osaka%201.jpg" alt="Hongkong Lights" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Osaka <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="OsakaCastle.html" class="attraction-link">Osaka Castle</a></li>
+                                <li>
+                                    <a href="Shinsaibashi.html" class="attraction-link">Shinsaibashi & Dotonbori</a>
+                                </li>
+                                <li><a href="KuromonMarket.html" class="attraction-link">Kuromon Market</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/Tokyo%201.jpg" alt="Beijing Temple of Heaven" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Tokyo <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="Tokyoskytree.html" class="attraction-link">Tokyo Skytree</a></li>
+                                <li><a href="ShibuyaCrossing.html" class="attraction-link">Shibuya Crossing</a></li>
+                                <li><a href="Akihabara.html" class="attraction-link">Akihabara</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section7-Korea" class="country-section china-section">
+                <div class="country-header">
+                    <img src="picture/korea.png" alt="Korea Flag Icon" class="flag-icon" />
+                    <h2 class="country-name">Korea</h2>
+                </div>
+
+                <div class="city-card-grid">
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/Busan.jpg" alt="Shanghai Skyline" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Busan<span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="Haeundaebeach.html" class="attraction-link">Haeundae Beach</a></li>
+                                <li>
+                                    <a href="GamcheonCulture.html" class="attraction-link">Gamcheon Culture Village</a>
+                                </li>
+                                <li><a href="BeomeosaTemple.html" class="attraction-link">Beomeosa Temple</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img src="picture/jeju" alt="Hongkong Lights" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Jeju <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="SunrisePeak.html" class="attraction-link">Sunrise Peak</a></li>
+                                <li>
+                                    <a href="HallasanNational.html" class="attraction-link">Hallasan National Park</a>
+                                </li>
+                                <li>
+                                    <a href="SeongeupFolkVillage.html" class="attraction-link">Seongeup Folk Village</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="city-card-group">
+                        <div class="image-item">
+                            <img
+                                src="picture/219740_SCN_Seoul_iStock521707831_ZC35CD.webp"
+                                alt="Beijing Temple of Heaven" />
+                        </div>
+                        <div class="details-item">
+                            <h3 class="city-name-small">
+                                Seoul <span class="mobile-arrow" onclick="toggleMenu(event, this)">▶</span>
+                            </h3>
+                            <ul class="attractions-list">
+                                <li><a href="Myeongdong.html" class="attraction-link">Myeongdong</a></li>
+                                <li><a href="SeoulTower.html" class="attraction-link">N Seoul Tower</a></li>
+                                <li><a href="EwhaWomans.html" class="attraction-link">Ewha Womans University</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================== ✅ Bootstrap Contact Modal ================== -->
+        <div class="modal fade" id="contactModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content contact-modal">
+                    <div class="modal-header border-0">
+                        <h2 class="modal-title">Contact us</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name :</label>
+                            <input type="text" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email :</label>
+                            <input type="email" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message :</label>
+                            <textarea rows="4" class="form-control"></textarea>
+                        </div>
+
+                        <div class="submit-container">
+                            <div class="submit-arrow" data-bs-dismiss="modal">➔</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Thanks for travelling with us ♡</p>
+            <p>We collect stories, cities, and food around the world.</p>
+
+            <!-- ✅ Bootstrap trigger（外观不变） -->
+            <button class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+
+            <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+        </footer>
+
+        <script>
+            function toggleMenu(event, element) {
+                event.stopPropagation();
+                const parent = element.closest(".details-item");
+                const menu = parent.querySelector(".attractions-list");
+                const arrow = element.querySelector(".mobile-arrow");
+
+                // 关闭其他
+                document.querySelectorAll(".attractions-list.active").forEach((m) => {
+                    if (m !== menu) m.classList.remove("active");
+                });
+
+                const isActive = menu.classList.toggle("active");
+
+                // 切换箭头方向 (开时向上，关时向右)
+                if (arrow) {
+                    arrow.innerText = isActive ? "▲" : "▶";
+                }
+            }
+
+            document.addEventListener("click", () => {
+                document.querySelectorAll(".attractions-list.active").forEach((m) => m.classList.remove("active"));
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const buttons = document.querySelectorAll(".country-button");
+
+                buttons.forEach((button) => {
+                    button.addEventListener("click", (e) => {
+                        e.preventDefault();
+
+                        buttons.forEach((btn) => btn.classList.remove("active"));
+                        e.currentTarget.classList.add("active");
+
+                        // 核心: 现在 href 属性是正确的 (#section5-china)
+                        const targetId = e.currentTarget.getAttribute("href");
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            const modal = document.getElementById("contactModal");
+            const openBtn = document.getElementById("openContact");
+            const closeX = document.getElementById("closeX");
+            const exitArrow = document.getElementById("submitAndExit");
+
+            openBtn.onclick = () => modal.classList.add("active");
+            closeX.onclick = () => modal.classList.remove("active");
+
+            // 点击箭头就退出
+            exitArrow.onclick = function () {
+                modal.classList.remove("active");
+                // 提交后清空，保持整洁
+                document.querySelectorAll(".form-group input, .form-group textarea").forEach((el) => (el.value = ""));
+            };
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+            integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    </body>
+</html>

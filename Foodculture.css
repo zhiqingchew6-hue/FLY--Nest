@@ -1,0 +1,819 @@
+/* --- 导航栏和页脚样式 (修正 Fly Nest 标题的蓝色背景宽度) --- */
+
+/* 1. 移除 body 上的居中对齐，确保顶级元素可以占据全宽 */
+body {
+    font-family: 'montserrat', sans-serif; 
+    font-weight: 700; 
+    margin: 0;
+    padding: 0; 
+    background-color: #f7f3ed; 
+    display: flex;
+    flex-direction: column;
+    /* 移除 align-items: center; 确保顶部元素宽度不受限制 */
+}
+
+/* 2. 确保最外层 div (section 1) 占据全宽 */
+.section\ 1 { /* 注意：HTML中使用了空格，但CSS中通常需要转义或使用更安全的类名 */
+    width: 100%;
+}
+/* 如果上面不工作，使用更强的选择器或直接针对 .navbar-container */
+
+.navbar-container {
+    background-color: #CCEFF7; 
+    width: 100%; /* 确保它占据父元素的全部宽度 */
+    height: 180px;
+    text-align: center;
+}
+.navbar-header {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 60px; 
+    font-weight: 700;
+    color: #004369; 
+    margin-bottom: 40px;
+}
+.navbar-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.navbar-links a {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 24px; 
+    font-weight: 500; 
+    color: #004369; 
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    border-radius: 30px;
+}
+.navbar-links a:hover {
+    background-color: #A8DBDC;
+    cursor: pointer;
+}
+.navbar-links a:active {
+    background-color: #A8DBDC; 
+}
+
+
+/* 页脚区域修正（保持上一次的修正，确保 Contact Us 居中且有背景） */
+.section8.contact-section {
+    background-color: #CCEFF7; 
+    min-height: 350px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: sans-serif; 
+    width: 100%; 
+}
+
+/* 保持页脚内容居中且限制宽度 */
+.section8 .container {
+    padding: 0;
+    max-width: 800px;
+    width: 100%;
+}
+
+.section8 .contact-content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+    padding: 50px 0; 
+    width: 100%; 
+}
+:root {
+    --navy: #004369;    /* 主要字体与深色 */
+    --cream: #FFF8EE;   /* 页面底色 */
+    --teal: #A8DBDC;    /* Food卡片背景 & 弹窗背景 */
+    --sky: #CCEFF7;     /* Header & Footer 背景 */
+}
+footer {
+    background-color: var(--sky);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--navy); 
+}
+
+footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; 
+    
+    
+}
+.title{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.contact-btn {
+    background-color: var(--teal);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: var(--navy);
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #92c9ca;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-box {
+    background-color: var(--teal);
+    width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    color: var(--navy);
+}
+
+.close-x {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cream);
+    
+}
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end; /* 确保箭头靠最右 */
+    margin-top: 10px;
+}
+
+.submit-arrow {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--navy);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* --- 食物展示区样式 (全屏宽度且中国菜 3 列) --- */
+
+.food-showcase-section {
+    width: 100%;
+    padding: 20px 0; 
+}
+
+/* 食物内容区域占据全宽，并增加左右内边距 */
+.container {
+    width: 100%; 
+    margin: 0 auto;
+    padding: 0 50px; 
+}
+
+/* 顶部横幅图片样式 */
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 国家标题样式 */
+.country-title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* 单个食物卡片样式 - 通用 */
+.food-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 食物名称样式 */
+.food-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(168, 219, 220, 1); 
+}
+
+/* --- 中国布局 (Grid) --- */
+.china-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    grid-auto-rows: 220px;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* 让 a 标签当 Grid Item */
+.food-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 左右大图 */
+.food-link.hotpot {
+    grid-row: span 2;
+}
+
+.food-link.duck {
+    grid-row: span 2;
+}
+
+/* 卡片样式 */
+.food-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #b9e6e6;
+    text-align: center;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #004369;
+
+}
+
+/* --- 日本布局 (Grid) - 调整比例 --- */
+.japan-grid {
+    display: grid;
+    /* 调整比例：左边 1 份，右边 2 份 (更自然) */
+    grid-template-columns: 1fr 2fr; 
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.japan-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%; 
+}
+
+.japan-left .food-item {
+    flex: 1; 
+}
+
+/* --- 韩国布局 (Grid) - 调整比例 --- */
+.korea-grid {
+    display: grid;
+    /* 调整比例：左边 2 份 (BBQ)，右边 1 份 (小图堆叠) */
+    grid-template-columns: 2fr 1fr; 
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.korea-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.korea-right .food-item {
+    flex: 1; 
+}
+
+/* 强制图片占满卡片 */
+.food-item img {
+    height: 100%;
+}
+
+/* --- 响应式调整 (保持不变) --- */
+@media (max-width: 850px) {
+    .container {
+        padding: 0 20px; 
+    }
+}
+
+@media (max-width: 600px) {
+    /* 在移动端或小平板上，将所有布局改为单列，以保证可读性 */
+    .china-grid, .japan-grid, .korea-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .china-grid .food-item, .japan-grid .food-item, .korea-grid .food-item {
+        width: 100%;
+        aspect-ratio: 3/2; 
+    }
+    .japan-left, .korea-right {
+        display: contents; 
+    }
+    .food-item.large-full, .japan-right-large, .korea-left-large {
+        aspect-ratio: 3/2 !important;
+    }
+    .navbar-links ul {
+        flex-wrap: wrap; 
+        gap: 20px;
+    }
+    .navbar-header {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+}
+/* clickable food cards */
+.food-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.food-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.food-link > .food-item {
+    width: 100%;
+    height: 100%;
+}
+/* Dan Dan：中上 */
+.food-link.dandan {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* Mapo：中下 */
+.food-link.mapo {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Beijing Roast Duck：右边大图 */
+.food-link.duck {
+    grid-column: 3;
+    grid-row: span 2;
+}
+/* ===== 强制 Grid 定位（最终版） ===== */
+
+/* Hot Pot：左边大图 */
+.food-link.hotpot {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+/* Dan Dan：中上 */
+.food-link.dandan {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* Mapo：中下（你要它在这里） */
+.food-link.mapo {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Beijing Roast Duck：右边大图 */
+.food-link.duck {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+/* 轮播图片 */
+.carousel img {
+  width: 100%;
+  display: none; /* 默认隐藏 */
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  display: block; /* 当前显示 */
+}
+
+/* 圆点导航 */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171; /* 当前激活圆点颜色 */
+}
+
+/* 标题文字 */
+.country-title {
+  color: #004369;
+  font-size: 30px;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;   /* 宽度自适应容器 */
+  height: 250px;     /* 控制轮播高度 */
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;      /* 高度撑满容器 */
+  object-fit: cover; /* 保持比例裁切 */
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+/* 圆点导航 */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* 标题文字 */
+.country-title {
+  color: #004369;
+  font-size: 30px;
+}
+
+/* ===== Mobile Food Slider (Final Version) ===== */
+.mobile-slider {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* 隐藏 desktop grid */
+  .china-grid,
+  .japan-grid,
+  .korea-grid {
+    display: none;
+  }
+
+  .mobile-slider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.35s ease;
+  }
+
+  .slider-track a {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .slider-track img {
+    width: 100%;
+    height: 220px;        /* ✅ 所有图片统一大小 */
+    object-fit: cover;   /* ✅ 不变形 */
+    border-radius: 14px;
+  }
+
+  .arrow-next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: rgba(0, 67, 105, 0.7);
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 6px 14px;
+    border-radius: 50%;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+@media (max-width: 768px) {
+
+  /* ⭐ 只给 Korea 左右留空间（不是缩图） */
+  .korea-slider .slider-track {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+}
+.korea-slider .slider-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  padding-left: 16px;   /* 左边空隙 */
+  padding-right: 16px;  /* 右边空隙 */
+  box-sizing: border-box;
+  gap: 16px;            /* 图片之间的间隙 */
+}
+@media (max-width: 768px) {
+
+  /* 只影响 Korea */
+  .korea-slider .slider-track a {
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  /* 最后一张不要多空隙 */
+  .korea-slider .slider-track a:last-child {
+    margin-right: 0;
+  }
+
+}
+/* ============================================================
+   1. DESKTOP 样式 (电脑端：屏幕大于 768px)
+   ============================================================ */
+@media screen and (min-width: 769px) {
+    /* 隐藏手机端的复选框和汉堡按钮 */
+    .menu-checkbox, 
+    .mobile-menu-icon {
+        display: none !important;
+    }
+
+    /* 确保电脑端菜单永远显示 */
+    .navbar-links {
+        display: block !important;
+        position: static; /* 恢复正常排列 */
+        width: auto;
+        background: none;
+        box-shadow: none;
+    }
+
+    .navbar-links ul {
+        display: flex; /* 横向排列 */
+        justify-content: center;
+        gap: 40px;
+        list-style: none;
+    }
+}
+
+/* ============================================================
+   2. MOBILE 样式 (手机端：屏幕小于 768px)
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    /* 隐藏复选框 */
+    .menu-checkbox {
+        display: none;
+    }
+
+    .navbar-container {
+        height: 80px !important;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 显示汉堡按钮 */
+    .mobile-menu-icon {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .mobile-menu-icon span {
+        width: 100%;
+        height: 3px;
+        background-color: #004369;
+        border-radius: 3px;
+    }
+
+    /* 手机端默认隐藏菜单 */
+    .navbar-links {
+        display: none; 
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 50%;
+        background-color: #CCEFF7;
+        z-index: 1050;
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* 核心：只有勾选了才在手机端显示 */
+    .menu-checkbox:checked ~ .navbar-links {
+        display: block !important;
+    }
+
+    .navbar-links ul {
+        flex-direction: column !important;
+        padding: 0;
+    }
+
+    .navbar-links a {
+        padding: 15px 20px;
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+}
+/* ================== Footer ================== */
+footer {
+    background-color: var(--sky);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--navy);
+}
+
+/* ================== Contact Button ================== */
+.contact-btn {
+    background-color: var(--teal);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: var(--navy);
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* ================== Modal ================== */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+    background-color: var(--teal);
+    width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    color: var(--navy);
+}
+
+
+.close-x {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 30px; cursor: pointer;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+.form-group input,
+.form-group textarea {
+    background-color: var(--cream);
+    color: var(--teal);
+}
+
+
+.submit-container { display: flex; justify-content: flex-end; margin-top: 10px; }
+.submit-arrow {
+    width: 40px; height: 40px; border: 2px solid var(--navy); border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 20px;
+}
+
+.modal-content {
+    background-color: var(--teal) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-box {
+        width: 90%;        /* 占屏幕 90% */
+        padding: 20px;     /* 缩小内边距 */
+    }
+}
+/* ================== Contact Modal 标题 ================== */
+.contact-modal .modal-title {
+    text-align: center;       /* 标题居中 */
+    color: var(--navy);       /* 文字颜色 */
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+/* ================== Contact Modal 表单文字 ================== */
+.contact-modal .form-group label,
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    color: var(--navy);       /* 全部文字颜色改为 --navy */
+}
+
+/* ================== Contact Modal 输入框背景调整（可选） ================== */
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    background-color: var(--cream);  /* 背景保持浅色 */
+}
+.contact-modal .modal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: bold;
+}

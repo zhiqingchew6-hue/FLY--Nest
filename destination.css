@@ -1,0 +1,843 @@
+body {
+    background-color: #fff8ee;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 2. 确保最外层 div (section 1) 占据全宽 */
+.section\ 1 { /* 注意：HTML中使用了空格，但CSS中通常需要转义或使用更安全的类名 */
+    width: 100%;
+}
+/* 如果上面不工作，使用更强的选择器或直接针对 .navbar-container */
+
+.navbar-container {
+    background-color: #CCEFF7; 
+    width: 100%; /* 确保它占据父元素的全部宽度 */
+    height: 180px;
+    text-align: center;
+}
+.navbar-header {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 60px; 
+    font-weight: 700;
+    color: #004369; 
+    margin-bottom: 40px;
+}
+.navbar-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.navbar-links a {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 24px; 
+    font-weight: 500; 
+    color: #004369; 
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    border-radius: 30px;
+}
+.navbar-links a:hover {
+    background-color: #A8DBDC;
+    cursor: pointer;
+}
+.navbar-links a:active {
+    background-color: #A8DBDC; 
+}
+#menu-toggle-input {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    /* 强制 Header 高度 */
+    .navbar-container {
+        height: 80px !important;
+        background-color: #CCEFF7;
+        position: relative; /* 关键：让按钮相对于这里定位 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 隐藏 Checkbox */
+    .menu-checkbox {
+        display: none;
+    }
+
+    /* 标题样式 */
+    .navbar-header {
+        font-size: 32px !important;
+        margin: 0 !important;
+        color: #004369;
+    }
+
+    /* 重新定位三横线按钮到右上角 */
+    .mobile-menu-icon {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        right: 20px; /* 距离右边 20px */
+        top: 30px; /* 距离顶部 30px，手动对齐标题 */
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .mobile-menu-icon span {
+        width: 100%;
+        height: 3px;
+        background-color: #004369;
+        border-radius: 3px;
+    }
+
+    /* 侧边菜单样式 */
+    .navbar-links {
+        display: none; /* 默认隐藏 */
+        position: absolute;
+        top: 80px; /* 紧贴 Header 下方 */
+        right: 0;
+        width: 50%; /* 占据右侧一半 */
+        background-color: #CCEFF7;
+        z-index: 1001;
+        box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 当 Checkbox 被勾选时显示菜单 */
+    .menu-checkbox:checked ~ .navbar-links {
+        display: block !important;
+    }
+
+    /* 菜单内部列表垂直排列 */
+    .navbar-links ul {
+        flex-direction: column !important;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .navbar-links li {
+        width: 100%;
+    }
+
+    .navbar-links a {
+        display: block;
+        padding: 15px 20px;
+        text-align: left;
+        color: #004369;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    /* 1. 缩小 Fly Nest 字体 */
+    .navbar-header {
+        font-size: 26px !important; /* 从 32px 降到 26px，显得更精致 */
+        font-weight: 700;
+        color: #004369;
+    }
+
+    /* 2. 菜单链接的 Hover 效果 */
+    .navbar-links a {
+        display: block;
+        padding: 15px 20px;
+        color: #004369;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease; /* 让变色更平滑 */
+    }
+
+    /* 当鼠标指着（Hover）或者点击（Active）时变色 */
+    .navbar-links a:hover {
+        background-color: #A8DBDC; /* 变成浅蓝色，匹配你之前的设计 */
+        color: #004369;
+    }
+}
+
+/* --- 桌面端样式 (电脑) --- */
+@media screen and (min-width: 769px) {
+    /* 确保电脑端的标题大小适中 */
+    .navbar-header {
+        font-size: 50px; 
+    }
+
+    /* 电脑端导航链接的 Hover 效果 */
+    .navbar-links a:hover {
+        background-color: #A8DBDC;
+        color: #004369;
+    }
+    .mobile-menu-icon {
+        display: none;
+    }
+}
+
+:root {
+    --navy: #004369; /* 主要字体与深色 */
+    --cream: #fff8ee; /* 页面底色 */
+    --teal: #a8dbdc; /* Food卡片背景 & 弹窗背景 */
+    --sky: #cceff7; /* Header & Footer 背景 */
+}
+
+/* ================== Footer ================== */
+footer {
+    background-color: var(--sky);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--navy);
+}
+
+/* ================== Contact Button ================== */
+.contact-btn {
+    background-color: var(--teal);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: var(--navy);
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* ================== Modal ================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-box {
+    background-color: var(--teal);
+    width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    color: var(--navy);
+}
+
+.close-x {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+    background-color: var(--cream);
+    color: var(--teal);
+}
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.submit-arrow {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--navy);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.modal-content {
+    background-color: var(--teal) !important;
+}
+
+/* ================== Contact Modal 标题 ================== */
+.contact-modal .modal-title {
+    text-align: center; /* 标题居中 */
+    color: var(--navy); /* 文字颜色 */
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* ================== Contact Modal 表单文字 ================== */
+.contact-modal .form-group label,
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    color: var(--navy); /* 全部文字颜色改为 --navy */
+}
+
+/* ================== Contact Modal 输入框背景调整（可选） ================== */
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    background-color: var(--cream); /* 背景保持浅色 */
+}
+.contact-modal .modal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: bold;
+}
+.section2 {
+    background-color: #fff8ee;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    width: 400%;
+    height: 600px;
+    animation: slide-show 15s infinite ease-in-out;
+}
+
+.carousel-slide {
+    width: 25%;
+    min-width: 25% !important;
+    flex-shrink: 0;
+}
+
+/* 图片本身的样式 */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes slide-show {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    95% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+.section3 {
+    background-color: #fff8ee;
+}
+
+.section3 .section-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #004369;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+.section-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #004369;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 0 40px;
+    margin-bottom: 50px;
+}
+
+.popular-attractions-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+}
+.link {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--default-text);
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.popular-attractions-grid::-webkit-scrollbar {
+    display: none;
+}
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #a8dbdc;
+    color: #004369;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: #a8dbdc;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.attraction-card {
+    position: relative;
+    min-width: 330px;
+    height: 420px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #a8dbdc;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-details {
+    padding: 20px 15px;
+    height: calc(400px - 230px);
+}
+.card-details .text-group {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    padding-top: 5px;
+}
+.rank-number-inline {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: #003366;
+    flex-shrink: 0;
+    margin-right: 15px;
+    line-height: 0.7;
+    position: static;
+    top: auto;
+    align-self: flex-start;
+}
+.card-details .text-group {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    padding-top: 5px;
+}
+.rank-and-title-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+.card-details h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #003366;
+    margin: 0;
+}
+.card-details .subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    color: #004369;
+    margin: 0;
+}
+.card-details .text-group {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.rating-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rating-score {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #003366;
+    margin-right: 10px;
+}
+
+.stars {
+    color: #004369;
+    font-size: 24px;
+}
+
+:root {
+    --primary-blue: #cceff7;
+    --active-blue: #a8dbdc;
+    --active-text: #004369;
+    --default-text: #004369;
+
+    --card-item-height: 300px;
+    --main-gap: 30px;
+    --column-gap: 20px;
+}
+.destination-page {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.country-buttons-container {
+    display: flex;
+    gap: 20%;
+    margin-bottom: 30px;
+    top: 0;
+    background-color: #fff8ee;
+    padding: 10px 10%;
+    z-index: 30;
+    justify-content: center;
+}
+
+.country-button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--default-text);
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    background-color: var(--primary-blue);
+    display: flex;
+}
+
+.country-button.active {
+    background-color: var(--active-blue);
+    color: var(--active-text);
+}
+@media (max-width: 768px) {
+    .country-buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* 图标之间的间距 */
+    }
+
+    .country-button {
+        font-size: 0; /* 隐藏文字 */
+        width: 60px; /* 图标圆圈的大小 */
+        height: 60px;
+        padding: 0; /* 清除原本的内边距 */
+        border-radius: 50%; /* 变成正圆 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover; /* 让背景图充满圆圈 */
+        background-position: center;
+        border: 2px solid #333; /* 对应你图中的深色边框 */
+    }
+
+    /* 分别为每个国家设置图标照片路径 */
+    .country-button[href="#section5-china"] {
+        background-image: url("picture/china%20icon.png");
+    }
+
+    .country-button[href="#section6-japan"] {
+        background-image: url("picture/japan%20icon.png");
+    }
+
+    .country-button[href="#section7-Korea"] {
+        background-image: url("picture/korea.png");
+    }
+
+    /* 如果选中状态需要特殊边框或阴影，可以在这里加 */
+    .country-button.active {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border: 3px solid var(--active-blue);
+    }
+}
+
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--main-gap);
+    width: 100%;
+}
+
+.main-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--column-gap);
+    width: 100%;
+}
+
+.country-section-header {
+    padding: 0;
+    margin: 0;
+}
+.country-header {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    width: 100%;
+}
+
+.city-rows-container {
+    display: grid;
+    grid-template-columns: 5fr;
+    gap: var(--main-gap);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.country-header .flag-icon {
+    width: 36px !important;
+    height: 36px !important;
+    object-fit: contain;
+    margin-right: 15px;
+    display: block;
+}
+
+.country-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0;
+}
+.city-card-group {
+    display: flex;
+    background-color: #cceff7;
+    border-radius: 30px;
+    overflow: hidden;
+    height: var(--card-item-height);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    padding: 0;
+}
+.city-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--main-gap);
+    width: 100%;
+    padding: 20px;
+}
+
+.city-pair-item {
+    padding: 5;
+    height: 100%;
+}
+
+.image-item {
+    flex: 0 0 35%;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.details-item {
+    flex: 1px;
+    background-color: var(--primary-blue);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.city-name-small {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    padding: 25px;
+    white-space: nowrap;
+    color: var(--default-text);
+}
+
+.attractions-list {
+    list-style: none;
+    padding: 20px;
+    margin: 5;
+}
+
+.attractions-list li {
+    line-height: 1.5;
+}
+
+.attraction-link {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--default-text);
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+}
+.mobile-arrow {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* 1. 外部滑动容器保持不变 */
+    .city-card-grid {
+        display: flex !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 2. 卡片格子：设置固定高度，确保照片有地方填满 */
+    .city-card-group {
+        flex: 0 0 85%; /* 宽度占屏幕 85% */
+        height: 400px; /* ⭐ 设置一个你满意的高度，照片会填满这个高度 */
+        position: relative; 
+        scroll-snap-align: center;
+        border-radius: 30px;
+        overflow: visible; /* 允许菜单往上弹出 */
+        background-color: #f0f0f0; /* 兜底背景色 */
+    }
+
+    /* 3. 照片：强制填满整个格子 */
+    .image-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* 放在底层 */
+    }
+
+    .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ⭐ 关键：让照片像背景一样铺满，不变形 */
+        border-radius: 30px;
+        display: block;
+    }
+
+    /* 4. 文字条：贴在格子最底部 */
+    .details-item {
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        width: 100%;
+        z-index: 10; /* 放在图片上面 */
+        padding: 0 !important;
+    }
+
+    .city-name-small {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(204, 239, 247, 0.95) !important; /* 浅蓝色，微透明更高级 */
+        color: #004369;
+        height: 60px;
+        padding: 0 20px;
+        margin: 0;
+        border-radius: 0 0 30px 30px; /* 只给底部圆角 */
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* 5. 箭头 */
+    .mobile-arrow {
+        display: inline-block !important;
+        font-size: 16px;
+    }
+
+    /* 6. 菜单向上弹出 */
+    .attractions-list {
+        display: none;
+        position: absolute;
+        bottom: 70px; /* 在文字条上方弹出 */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background-color: #cceff7;
+        border-radius: 20px;
+        padding: 10px 0;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.15);
+        z-index: 20;
+    }
+
+    .attractions-list.active {
+        display: block;
+    }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}

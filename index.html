@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly Nest</title>
+
+    <!-- Bootstrap 先 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet" />
+
+<!-- ✅ 你的 CSS 永远最后 -->
+<link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+
+<div class="section 1">
+            <div class="navbar-container">
+                <input type="checkbox" id="menu-toggle-input" class="menu-checkbox" />
+                <div class="navbar-header">Fly Nest</div>
+                <label for="menu-toggle-input" class="mobile-menu-icon">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <nav class="navbar-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="Foodculture.html">Food Culture</a></li>
+                        <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                        <li><a href="tips.html">Travel Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+<div class="section1">
+    <div class="carousel-container">
+        <div class="carousel-slide"><img src="image/main (1).jpg"></div>
+        <div class="carousel-slide"><img src="image/main (3).jpg"></div>
+        <div class="carousel-slide"><img src="image/main (4).jpg"></div>
+        <div class="carousel-slide"><img src="image/main (5).jpg"></div>
+    </div>
+</div>
+
+<main class="container">
+
+    <!-- Travel -->
+    <section class="section travel">
+        <div class="section-text">
+            <h2>Travel</h2>
+            <p>Explore breathtaking landscapes and hidden gems across the globe. From bustling city streets to serene natural wonders, we bring you the stories that make every journey unforgettable.</p>
+        </div>
+        <div class="travel-display">
+            <div class="travel-main"><img src="image/homepage travel (1).jpg"></div>
+            <div class="travel-side">
+                <img src="image/homepage travel (2).jpg">
+                <img src="image/homepage travel (3).jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel -->
+    <section class="section hotel">
+        <div class="hotel-flex">
+            <div class="section-text hotel-info">
+                <h2>Hotel</h2>
+                <p>Discover a curated selection of stays that blend luxury with local charm. Whether it’s a boutique city hotel or a quiet seaside villa, find the perfect place to rest and recharge.</p>
+            </div>
+            <div class="hotel-viewport">
+                <button class="nav-arrow prev" id="prevHotel">&#10094;</button>
+                <div class="hotel-track" id="hotelTrack">
+                    <img src="image/hotel (10).jpg" class="hotel-img">
+                    <img src="image/hotel (9).jpg" class="hotel-img">
+                    <img src="image/hotel (8).jpg" class="hotel-img">
+                </div>
+                <button class="nav-arrow next" id="nextHotel">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+   <!-- Food -->
+<section class="section food-section">
+    <h2>Food</h2>
+    <p>
+        Journey through flavors that define destinations. From authentic street food to exquisite local delicacies,
+        experience how every bite tells a unique story of heritage and passion.
+    </p>
+
+    <!-- Desktop：正常三列 -->
+    <div class="row d-none d-md-flex food-desktop">
+        <div class="col-md-4">
+            <div class="food-card">
+                <img src="image/Hotpot.jpg" class="img-fluid">
+                <div class="food-info">
+                  <ul>
+                    <li><a href="China.html"><h3>China</h3></a></li>
+                  </ul>
+                    <p>Dive into the heart of Asian cuisine with sizzling stir-fries and warming hotpots.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="food-card">
+                <img src="image/sushi.jpg" class="img-fluid">
+                <div class="food-info">
+                    <ul>
+                    <li><a href="Japan.html"><h3>Japan</h3></a></li>
+                  </ul>
+                    <p>Experience the delicate balance of seasonal ingredients and ramen culture.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="food-card">
+                <img src="image/tteokbokki.jpg" class="img-fluid">
+                <div class="food-info">
+                    <ul>
+                    <li><a href="Korea.html"><h3>Korea</h3></a></li>
+                  </ul>
+                    <p>Spicy tteokbokki and savory grills create a feast for the senses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile：Bootstrap Carousel -->
+    <div id="foodCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="food-card">
+                    <img src="image/Hotpot.jpg" class="d-block w-100">
+                    <div class="food-info">
+                        <ul>
+                            <li>
+                                <a href="China.html"><h3>China</h3></a>
+                            </li>
+                        </ul>
+                        <p>Dive into the heart of Asian cuisine with sizzling stir-fries and warming hotpots.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="food-card">
+                    <img src="image/sushi.jpg" class="d-block w-100">
+                    <div class="food-info">
+                        <ul>
+                            <li>
+                                <a href="Japan.html"><h3>Japan</h3></a>
+                            </li>
+                        </ul>
+                        <p>Experience the delicate balance of seasonal ingredients and ramen culture.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="food-card">
+                    <img src="image/tteokbokki.jpg" class="d-block w-100">
+                    <div class="food-info">
+                        <ul>
+                            <li>
+                                <a href="Korea.html"><h3>Korea</h3></a>
+                            </li>
+                        </ul>
+                        <p>Spicy tteokbokki and savory grills create a feast for the senses.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 箭头 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+</main>
+
+<!-- Tips -->
+<section class="tips-section-container">
+    <div class="tips-image-wrapper">
+        <img src="image/homepage.jpg" class="tips-main-img">
+        <div class="tips-glass-box">
+            
+            <ul>
+                <li>
+                  <a href="tips.html"><h3>Tips</h3></a>
+                </li>
+             </ul>
+            <p>Maximize your adventure with our essential guides. From packing hacks to cultural etiquette, we share the secrets you need to travel like a local.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================== ✅ Bootstrap Contact Modal ================== -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content contact-modal">
+
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Contact us</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Name :</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Email :</label>
+            <input type="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Message :</label>
+            <textarea rows="4" class="form-control"></textarea>
+        </div>
+
+        <div class="submit-container">
+            <div class="submit-arrow" data-bs-dismiss="modal">➔</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+    <p>Thanks for travelling with us ♡</p>
+    <p>We collect stories, cities, and food around the world.</p>
+
+    <!-- ✅ Bootstrap trigger（外观不变） -->
+    <button class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+        Contact Us
+    </button>
+
+    <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+</footer>
+
+<!-- 你原本的 JS（Hotel + Menu）完全保留 -->
+<script>
+const hotelTrack = document.getElementById('hotelTrack');
+let isAnimating = false;
+
+function getCardWidth() {
+    const card = hotelTrack.querySelector('.hotel-img');
+    const style = getComputedStyle(card);
+    const gap = parseInt(getComputedStyle(hotelTrack).gap) || 0;
+    return card.offsetWidth + gap;
+}
+
+document.getElementById('nextHotel').onclick = () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const moveX = getCardWidth();
+    hotelTrack.style.transition = 'transform 0.5s ease';
+    hotelTrack.style.transform = `translateX(-${moveX}px)`;
+
+    setTimeout(() => {
+        hotelTrack.style.transition = 'none';
+        hotelTrack.appendChild(hotelTrack.firstElementChild);
+        hotelTrack.style.transform = 'translateX(0)';
+        isAnimating = false;
+    }, 500);
+};
+
+document.getElementById('prevHotel').onclick = () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const moveX = getCardWidth();
+    hotelTrack.style.transition = 'none';
+    hotelTrack.insertBefore(hotelTrack.lastElementChild, hotelTrack.firstElementChild);
+    hotelTrack.style.transform = `translateX(-${moveX}px)`;
+
+    requestAnimationFrame(() => {
+        hotelTrack.style.transition = 'transform 0.5s ease';
+        hotelTrack.style.transform = 'translateX(0)';
+    });
+
+    setTimeout(() => isAnimating = false, 500);
+};
+
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+menuToggle.onclick = () => navLinks.classList.toggle('show');
+</script>
+
+<!-- ✅ Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

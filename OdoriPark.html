@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Guangzhou | Fly Nest</title>
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@300&family=Poppins:wght@400&display=swap"
+            rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- ✅ Bootstrap CSS（只为 Contact Us） -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="china.css" />
+    </head>
+
+    <body>
+        <div class="section 1">
+            <div class="navbar-container">
+                <input type="checkbox" id="menu-toggle-input" class="menu-checkbox" />
+                <div class="navbar-header">Fly Nest</div>
+                <label for="menu-toggle-input" class="mobile-menu-icon">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <nav class="navbar-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="Foodculture.html">Food Culture</a></li>
+                        <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                        <li><a href="tips.html">Travel Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <main class="destination-page">
+            <!-- ===== Title Section ===== -->
+            <section class="title-section">
+                <h1 class="city-title">Hokkaido</h1>
+                <p class="sub-title">Odori Park, Sappora</p>
+
+                <div class="rating">5.0 ★★★★★</div>
+            </section>
+
+            <!-- ===== Image Grid ===== -->
+
+            <div class="section-image">
+                <div class="image-grid">
+                    <img src="picture3/Odori%20Park,%20Sappora1.jpg" class="img-small" />
+                    <img src="picture3/Odori%20Park,%20Sappora2.jpg" class="img-small" />
+                    <img src="picture3/Odori%20Park,%20Sappora3.jpg" class="img-large" />
+                </div>
+            </div>
+
+            <!-- ===== Info Tabs ===== -->
+            <nav class="info-nav">
+                <div class="mobile-dropdown-btn" onclick="toggleDropdown()">
+                    <span id="current-text">Introduction</span>
+                    <span class="arrow-icon">▶</span>
+                </div>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="javascript:void(0)" onclick="changeContent('introduction', 'Introduction')"
+                        >Introduction</a
+                    >
+                    <a href="javascript:void(0)" onclick="changeContent('attractions', 'Top Attractions')"
+                        >Top Attractions</a
+                    >
+                    <a href="javascript:void(0)" onclick="changeContent('history', 'History')">History</a>
+                    <a href="javascript:void(0)" onclick="changeContent('hotels', 'Hotels')">Hotels</a>
+                    <a href="javascript:void(0)" onclick="changeContent('foodculture', 'Traditional Food')"
+                        >Traditional Food</a
+                    >
+                </div>
+            </nav>
+
+            <!-- ===== Introduction ===== -->
+            <section id="introduction" class="info-section">
+                <p>
+                    Odori Park is a large public park located in the center of Sapporo, the capital city of Hokkaido.
+                    Stretching for about 1.5 kilometers, the park divides the city into north and south areas and serves
+                    as a major green space in the urban environment. Known for its seasonal beauty and wide open lawns,
+                    Odori Park is a popular place for relaxation, sightseeing, and public events throughout the year.
+                </p>
+            </section>
+
+            <!-- ===== Top Attractions ===== -->
+            <section id="attractions" class="info-section">
+                <h2 class="section-title">Top Attraction</h2>
+                <p>
+                    Odori Park is famous for hosting some of Sapporo’s most important festivals and events. The Sapporo
+                    Snow Festival, held every winter, attracts visitors from around the world with its large snow and
+                    ice sculptures. In summer, the park features flower displays, beer gardens, and outdoor activities,
+                    creating a lively atmosphere. The park is also close to major landmarks such as the Sapporo TV
+                    Tower, which offers panoramic views of the park and the city. Walking through Odori Park allows
+                    visitors to enjoy fountains, gardens, and city views while experiencing the relaxed lifestyle of
+                    Sapporo.
+                </p>
+            </section>
+
+            <!-- ===== History ===== -->
+            <section id="history" class="info-section">
+                <h2 class="section-title">History</h2>
+                <p>
+                    Odori Park was originally created in 1871 as a firebreak to prevent the spread of fires in Sapporo.
+                    Over time, it was developed into a public park and became an important part of the city’s urban
+                    planning. As Sapporo grew, Odori Park transformed into a central cultural and recreational space.
+                    Today, it stands as a symbol of the city, representing Sapporo’s connection to nature, community
+                    life, and seasonal festivals.
+                </p>
+            </section>
+
+            <!-- ===== Hotels ===== -->
+            <section id="hotels" class="hotel-section">
+                <h2 class="section-title">Hotels</h2>
+
+                <div class="hotel-grid">
+                    <div class="hotel-card">
+                        <img src="hotel/Sapporo%20Tokyu%20Rei%20Hotel.jpg" />
+                        <p>Sapporo Tokyu Rei Hotel</p>
+                    </div>
+
+                    <div class="hotel-card">
+                        <img src="hotel/THE%20GATE%20HOTEL%20SAPPORO.jpg" />
+                        <p>THE GATE HOTEL SAPPORO</p>
+                    </div>
+
+                    <div class="hotel-card">
+                        <img src="hotel/Mercure%20Sapporo%20hotel.jpg" />
+                        <p>Mercure Sapporo Hotel</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="foodculture" class="food-section">
+                <h2 class="section-title">Tradisional Food</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="Food4/Odoripark%20food1.jpg" alt="Carousel Image 1" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Food4/Odoripark%20food2.jpg" alt="Carousel Image 2" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Food4/Odoripark%20food3.jpg" alt="Carousel Image 3" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="Food4/Odoripark%20food4.jpg" alt="Carousel Image 4" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Back ===== -->
+            <a href="destination.html" class="back-btn">
+                <span class="back-text">Back to Destinations</span>
+                <span class="back-icon">→</span>
+            </a>
+        </main>
+        <!-- ================== ✅ Bootstrap Contact Modal ================== -->
+        <div class="modal fade" id="contactModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content contact-modal">
+                    <div class="modal-header border-0">
+                        <h2 class="modal-title">Contact us</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name :</label>
+                            <input type="text" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email :</label>
+                            <input type="email" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message :</label>
+                            <textarea rows="4" class="form-control"></textarea>
+                        </div>
+
+                        <div class="submit-container">
+                            <div class="submit-arrow" data-bs-dismiss="modal">➔</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Thanks for travelling with us ♡</p>
+            <p>We collect stories, cities, and food around the world.</p>
+
+            <!-- ✅ Bootstrap trigger（外观不变） -->
+            <button class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+
+            <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+        </footer>
+
+        <script>
+            const modal = document.getElementById("contactModal");
+            const openBtn = document.getElementById("openContact");
+            const closeX = document.getElementById("closeX");
+            const exitArrow = document.getElementById("submitAndExit");
+
+            openBtn.onclick = () => modal.classList.add("active");
+            closeX.onclick = () => modal.classList.remove("active");
+
+            // 点击箭头就退出
+            exitArrow.onclick = function () {
+                modal.classList.remove("active");
+                // 提交后清空，保持整洁
+                document.querySelectorAll(".form-group input, .form-group textarea").forEach((el) => (el.value = ""));
+            };
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+            integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+        <script>
+            function toggleDropdown() {
+                const nav = document.getElementById("navLinks");
+                const btn = document.querySelector(".mobile-dropdown-btn");
+
+                nav.classList.toggle("active");
+                btn.classList.toggle("active");
+            }
+
+            /* 切换内容（手机模式） */
+            function changeContent(sectionId, titleText) {
+                // 只在手机模式执行
+                if (window.innerWidth <= 768) {
+                    // 1️⃣ 更新标题文字
+                    document.getElementById("current-text").innerText = titleText;
+
+                    // 2️⃣ 关闭下拉菜单
+                    document.getElementById("navLinks").classList.remove("active");
+
+                    // 3️⃣ 隐藏全部 section
+                    const sections = document.querySelectorAll(".info-section, .hotel-section, .food-section");
+                    sections.forEach((sec) => (sec.style.display = "none"));
+
+                    // 4️⃣ 显示被点的 section
+                    document.getElementById(sectionId).style.display = "block";
+                }
+            }
+
+            /* 页面载入时（手机）默认只显示 Introduction */
+            window.addEventListener("load", () => {
+                if (window.innerWidth <= 768) {
+                    const sections = document.querySelectorAll(".info-section, .hotel-section, .food-section");
+                    sections.forEach((sec) => (sec.style.display = "none"));
+
+                    document.getElementById("introduction").style.display = "block";
+                }
+            });
+        </script>
+
+        <script>
+            const slides = document.getElementById("food");
+            const totalSlides = slides.children.length;
+            let index = 0;
+
+            setInterval(() => {
+                index = (index + 1) % totalSlides;
+                slides.style.transform = `translateX(-${index * (100 / totalSlides)}%)`;
+            }, 4000);
+        </script>
+    </body>
+</html>

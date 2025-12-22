@@ -1,0 +1,252 @@
+<!doctype html>
+<body>
+    <header class="navbar-wrapper">
+        <div class="navbar-container">
+            <input type="checkbox" id="menu-toggle-input" class="menu-checkbox" />
+            <div class="navbar-header">Fly Nest</div>
+            <label for="menu-toggle-input" class="mobile-menu-icon"> <span></span><span></span><span></span> </label>
+            <nav class="navbar-links">
+                <ul>
+                   <li><a href="index.html">Home</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="Foodculture.html">Food Culture</a></li>
+                        <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                        <li><a href="tips.html">Travel Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="china-banner"></section>
+
+    <section class="hot-pot-content"></section>
+</body>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>日本美食文化</title>
+
+        <link rel="stylesheet" href="styles.css" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="Foodculture.css" />
+    </head>
+    <body>
+        <header class="hero-banner" style="background-image: url(picture/Japan.jpg)">
+            <div class="banner-content">
+                <h1 style="color: #004369">Japan</h1>
+            </div>
+        </header>
+
+        <main class="food-gallery">
+            <section class="food-card row-reverse" id="Sushi">
+                <div class="food-details">
+                    <h2 class="align-left">Sushi</h2>
+                    <p class="align-left">
+                        Sushi is a traditional Japanese dish made with vinegared rice combined with a variety of
+                        ingredients such as raw or cooked seafood, vegetables, and occasionally tropical fruits. The
+                        most popular forms include nigiri (slices of fish over rice), maki (rolled sushi with seaweed),
+                        and sashimi (slices of raw fish served without rice). Sushi emphasizes freshness, balance of
+                        flavors, and aesthetic presentation, making it both a culinary and visual experience
+                    </p>
+                </div>
+                <div class="food-image">
+                    <img src="picture/Japan sushi.webp" alt="Sushi" />
+                </div>
+            </section>
+
+            <section class="food-card" id="Takoyaki">
+                <div class="food-details">
+                    <h2 class="align-left">Takoyaki</h2>
+                    <p class="align-left">
+                        Takoyaki is a popular Japanese street food originating from Osaka. It consists of small, round
+                        batter balls filled with diced octopus, tempura scraps, pickled ginger, and green onions, cooked
+                        in a special molded pan. Once golden and crispy on the outside, they are topped with takoyaki
+                        sauce, mayonnaise, dried bonito flakes, and seaweed powder. Takoyaki is known for its soft,
+                        slightly gooey interior and savory flavor, often enjoyed at festivals or casual gatherings
+                    </p>
+                </div>
+                <div class="food-image">
+                    <img src="picture/Japan takoyaki.webp" alt="takoyaki" />
+                </div>
+            </section>
+
+            <section class="food-card row-reverse" id="Tempura">
+                <div class="food-details">
+                    <h2 class="align-left">Tempura</h2>
+                    <p class="align-left">
+                        Tempura is a traditional Japanese dish consisting of seafood, vegetables, or even mushrooms,
+                        lightly battered and deep-fried until golden and crisp. The batter is typically made from cold
+                        water, flour, and sometimes eggs, resulting in a delicate, airy coating that enhances the
+                        natural flavors of the ingredients. Tempura is often served with a dipping sauce called
+                        tentsuyu, grated daikon radish, or simply seasoned with salt. The dish highlights the contrast
+                        between a crispy exterior and tender interior, making it a cornerstone of Japanese cuisine.
+                    </p>
+                </div>
+                <div class="food-image">
+                    <img src="picture/Japan tempura.jpg" alt="tempura" />
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="back-link"><a href="Foodculture.html"> back to Food Culture </a></p>
+        </footer>
+
+        <div class="modal-overlay" id="contactModal">
+            <div class="modal-box">
+                <span class="close-x" id="closeX">&times;</span>
+                <h2 class="title">Contact us</h2>
+
+                <div class="form-group">
+                    <label>Name :</label>
+                    <input type="text" id="nameInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email :</label>
+                    <input type="email" id="emailInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea rows="4" id="messageInput"></textarea>
+                </div>
+
+                <div class="submit-container">
+                    <div class="submit-arrow" id="submitAndExit">➔</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Thanks for travelling with us ♡</p>
+            <p>We collect stories, cities, and food around the world just to make your trip easier and happier.</p>
+            <button class="contact-btn" id="openContact">Contact Us</button>
+            <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+        </footer>
+
+        <script>
+            const modal = document.getElementById("contactModal");
+            const openBtn = document.getElementById("openContact");
+            const closeX = document.getElementById("closeX");
+            const exitArrow = document.getElementById("submitAndExit");
+
+            openBtn.onclick = () => modal.classList.add("active");
+            closeX.onclick = () => modal.classList.remove("active");
+
+            // 点击箭头就退出
+            exitArrow.onclick = function () {
+                modal.classList.remove("active");
+                // 提交后清空，保持整洁
+                document.querySelectorAll(".form-group input, .form-group textarea").forEach((el) => (el.value = ""));
+            };
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+            integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+
+        <div
+            class="modal fade"
+            id="ContactUsModal"
+            tabindex="-1"
+            aria-labelledby="ContactUsModalLabel"
+            aria-hidden="true"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="border: none; background-color: transparent">
+                    <div class="modal-body" style="background-color: #a8dbdc; padding: 40px; border-radius: 0">
+                        <div
+                            class="modal-header"
+                            style="
+                                border-bottom: none;
+                                padding: 0 0 30px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            ">
+                            <h5
+                                class="modal-title"
+                                id="ContactUsModalLabel"
+                                style="color: #004369; font-size: 1.8em; font-weight: bold">
+                                Contact us
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                                style="filter: invert(10%)"></button>
+                        </div>
+
+                        <form id="ContactForm">
+                            <div class="mb-4">
+                                <label
+                                    for="Name"
+                                    class="form-label"
+                                    style="color: #004369; font-weight: normal; margin-bottom: 5px"
+                                    >Name :</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="Name"
+                                    style="background-color: #fff8ee; border: none; padding: 15px; height: 50px" />
+                            </div>
+
+                            <div class="mb-4">
+                                <label
+                                    for="Email"
+                                    class="form-label"
+                                    style="color: #004369; font-weight: normal; margin-bottom: 5px"
+                                    >Email :</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="Email"
+                                    placeholder=""
+                                    style="background-color: #fff8ee; border: none; padding: 15px; height: 50px" />
+                            </div>
+
+                            <div class="mb-4">
+                                <label
+                                    for="Message"
+                                    class="form-label"
+                                    style="color: #04369c; font-weight: normal; margin-bottom: 5px"
+                                    >Message:</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="Message"
+                                    rows="5"
+                                    style="
+                                        background-color: #fff8ee;
+                                        border: none;
+                                        padding: 15px;
+                                        min-height: 200px;
+                                        resize: none;
+                                    "></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

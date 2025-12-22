@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fly Nest</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="hotel.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+        
+
+    </head>
+    <body>
+        <div class="section 1">
+            <div class="navbar-container">
+                <input type="checkbox" id="menu-toggle-input" class="menu-checkbox" />
+                <div class="navbar-header">Fly Nest</div>
+                <label for="menu-toggle-input" class="mobile-menu-icon">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <nav class="navbar-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="Foodculture.html">Food Culture</a></li>
+                        <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                        <li><a href="tips.html">Travel Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <section id="hotels" class="hotels-section">
+            <div class="container">
+                <h2 class="hotels-heading" style="font-family: 'Poppins', sans-serif; font-weight: bold;">China Popular Properties</h2>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-container" id="chinaCarousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="moveCarousel('china', -1)" aria-label="Previous">
+                            <img src="images/left-arrows.png" alt="Previous" />
+                        </button>
+                        <div class="carousel-track" id="chinaTrack">
+                            <div class="carousel-slide">
+                                <a href="hotel-mercure.html" class="h-100 d-block hotel-card-link">
+                                    <div class="hotel-card h-100">
+                                        <img
+                                            src="images/Mercure Guangzhou.jpg"
+                                            alt="Mercure Guangzhou Beijing Road Pedestrian Street Hotel"
+                                            class="hotel-card-photo" />
+                                        <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                            <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">
+                                                Mercure Guangzhou Beijing Road Pedestrian Street Hotel
+                                            </h3>
+                                            <div class="hotel-meta">
+                                                <div class="rating-group">
+                                                    <span class="hotel-rating">5.0</span>
+                                                    <span class="hotel-stars">★★★★★</span>
+                                                </div>
+                                                <span class="hotel-price">RM 450</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="hotel-ji.html" class="h-100 d-block hotel-card-link">                            
+                                    <div class="hotel-card h-100" style="display: flex; flex-direction: column;">
+                                    <img
+                                    src="images/JI Hotel.jpg"
+                                    alt="JI Hotel (Guangzhou Caihong Xiao Subway Station)"
+                                    class="hotel-card-photo" />
+                                    <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                        <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">JI Hotel (Guangzhou Caihong Xiao Subway Station)</h3>
+                                        <div class="hotel-meta">
+                                            <div class="rating-group">
+                                                <span class="hotel-rating">4.0</span>
+                                                <span class="hotel-stars">★★★★</span>
+                                            </div>
+                                            <span class="hotel-price">RM470 </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="hotel-rezen.html" class="h-100 d-block hotel-card-link">                            
+                                <div class="hotel-card h-100" style="display: flex; flex-direction: column;">
+                                    <img
+                                    src="images/Rezen Meta.webp"
+                                    alt="Rezen Meta Tree Hotel (City Center &amp; The Bund, Shanghai)"
+                                    class="hotel-card-photo" />
+                                    <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                        <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">Rezen Meta Tree Hotel (City Center &amp; The Bund, Shanghai)</h3>
+                                        <div class="hotel-meta">
+                                            <div class="rating-group">
+                                                <span class="hotel-rating">4.6</span>
+                                                <span class="hotel-stars">★★★★</span>
+                                            </div>
+                                            <span class="hotel-price">RM 510</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="moveCarousel('china', 1)" aria-label="Next">
+                            <img src="images/right-arrows.png" alt="Next" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hotels" class="hotels-section">
+            <div class="container">
+                <h2 class="hotels-heading" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">Japan Popular Properties</h2>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-container" id="japanCarousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="moveCarousel('japan', -1)" aria-label="Previous">
+                            <img src="images/left-arrows.png" alt="Previous" />
+                        </button>
+                        <div class="carousel-track" id="japanTrack">
+                            <div class="carousel-slide">
+                                <a href="hotel-narita.html" class="h-100 d-block hotel-card-link">
+                                    <div class="hotel-card h-100" style="display: flex; flex-direction: column;">
+                                        <img
+                                        src="images/Narita Gateway Hotel.jpg"
+                                        alt="Narita Gateway Hotel"
+                                        class="hotel-card-photo" />
+                                        <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                            <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px">Narita Gateway Hotel</h3>
+                                            <div class="hotel-meta">
+                                                <div class="rating-group">
+                                                    <span class="hotel-rating">4.3</span>
+                                                    <span class="hotel-stars">★★★★</span>
+                                                </div>
+                                                <span class="hotel-price">RM 480</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="hotel-villa.html" class="h-100 d-block hotel-card-link">
+                                    <div class="hotel-card h-100" style="display: flex; flex-direction: column;">
+                                        <img
+                                        src="images/Hotel Villa Fontaine.jpg"
+                                        alt="Hotel Villa Fontaine Grand Haneda Airport"
+                                        class="hotel-card-photo" />
+                                        <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                            <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">Hotel Villa Fontaine Grand Haneda Airport</h3>
+                                            <div class="hotel-meta">
+                                                <div class="rating-group">
+                                                    <span class="hotel-rating">4.0</span>
+                                                    <span class="hotel-stars">★★★★</span>
+                                                </div>
+                                                <span class="hotel-price">RM 440</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="hotel-monday.html" class="h-100 d-block hotel-card-link">
+                                    <div class="hotel-card h-100">
+                                        <img
+                                        src="images/Hotel Monday Premium.jpg"
+                                        alt="Hotel Monday Premium Ueno Okachimachi"
+                                        class="hotel-card-photo" />
+                                        <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                            <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">Hotel Monday Premium Ueno Okachimachi</h3>
+                                            <div class="hotel-meta">
+                                                <div class="rating-group">
+                                                    <span class="hotel-rating">5.0</span>
+                                                    <span class="hotel-stars">★★★★★</span>
+                                                </div>
+                                                <span class="hotel-price">RM 590</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="moveCarousel('japan', 1)" aria-label="Next">
+                            <img src="images/right-arrows.png" alt="Next" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hotels" class="hotels-section">
+            <div class="container">
+                <h2 class="hotels-heading" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">Korea Popular Properties</h2>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-container" id="koreaCarousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="moveCarousel('korea', -1)" aria-label="Previous">
+                            <img src="images/left-arrows.png" alt="Previous" />
+                        </button>
+                        <div class="carousel-track" id="koreaTrack">
+                            <div class="carousel-slide">
+                                <a href="hotel-ondo.html" class="h-100 d-block hotel-card-link">
+                                    <div class="hotel-card h-100" style="display: flex; flex-direction: column;">
+                                        <img
+                                        src="images/Ondo Hotel.jpg"
+                                        alt="Ondo Hotel and Spa Seoul Jongro"
+                                        class="hotel-card-photo" />
+                                        <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                            <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px">Ondo Hotel and Spa Seoul Jongro</h3>
+                                            <div class="hotel-meta">
+                                                <div class="rating-group">
+                                                    <span class="hotel-rating">4.0</span>
+                                                    <span class="hotel-stars">★★★★</span>
+                                                </div>
+                                                <span class="hotel-price">RM 410</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="hotel-royal.html" class="h-100 d-block hotel-card-link">
+                                    <div class="hotel-card h-100" style="display: flex; flex-direction: column;">
+                                        <img
+                                        src="images/Royal Emporium.jpg"
+                                        alt="Royal Emporium Incheon"
+                                        class="hotel-card-photo" />
+                                        <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                            <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">Royal Emporium Incheon</h3>
+                                            <div class="hotel-meta">
+                                                <div class="rating-group">
+                                                    <span class="hotel-rating">4.0</span>
+                                                    <span class="hotel-stars">★★★★</span>
+                                                </div>
+                                                <span class="hotel-price">RM 530</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="hotel-gaden.html" class="h-100 d-block hotel-card-link">
+                                    <div class="hotel-card h-100" style="display: flex; flex-direction: column;">
+                                        <img
+                                        src="images/Hotel Gaden.jpg"
+                                        alt="Hotel Gaden"
+                                        class="hotel-card-photo" />
+                                        <div class="hotel-info" style="/* height: 100%; */ flex-grow: 1;">
+                                            <h3 class="hotel-name" style="font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 24px;">Hotel Gaden</h3>
+                                            <div class="hotel-meta">
+                                                <div class="rating-group">
+                                                    <span class="hotel-rating">5.0</span>
+                                                    <span class="hotel-stars">★★★★★</span>
+                                                </div>
+                                                <span class="hotel-price">RM 470</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="moveCarousel('korea', 1)" aria-label="Next">
+                            <img src="images/right-arrows.png" alt="Next" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal-overlay" id="contactModal">
+            <div class="modal-box">
+                <span class="close-x" id="closeX">&times;</span>
+                <h2 class="title">Contact us</h2>
+
+                <div class="form-group">
+                    <label>Name :</label>
+                    <input type="text" id="nameInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email :</label>
+                    <input type="email" id="emailInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea rows="4" id="messageInput"></textarea>
+                </div>
+
+                <div class="submit-container">
+                    <div class="submit-arrow" id="submitAndExit">➔</div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <footer style="margin-top: 1px;">
+            <p>Thanks for travelling with us ♡</p>
+            <p>We collect stories, cities, and food around the world just to make your trip easier and happier.</p>
+            <button class="contact-btn" id="openContact">Contact Us</button>
+            <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+        </footer>
+
+        <script>
+            const modal = document.getElementById("contactModal");
+            const openBtn = document.getElementById("openContact");
+            const closeX = document.getElementById("closeX");
+            const exitArrow = document.getElementById("submitAndExit");
+
+            openBtn.onclick = () => modal.classList.add("active");
+            closeX.onclick = () => modal.classList.remove("active");
+
+            // 点击箭头就退出
+            exitArrow.onclick = function () {
+                modal.classList.remove("active");
+                // 提交后清空，保持整洁
+                document.querySelectorAll(".form-group input, .form-group textarea").forEach((el) => (el.value = ""));
+            };
+
+            // Hamburger menu toggle
+            const menuToggle = document.getElementById("menuToggle");
+            const menuItems = document.getElementById("menuItems");
+
+            menuToggle.onclick = function() {
+                menuItems.classList.toggle("active");
+                menuToggle.classList.toggle("active");
+            };
+
+            // Carousel functionality
+            const carouselStates = {
+                china: 0,
+                japan: 0,
+                korea: 0
+            };
+
+            function moveCarousel(section, direction) {
+                const track = document.getElementById(section + 'Track');
+                const slides = track.querySelectorAll('.carousel-slide');
+                const totalSlides = slides.length;
+                
+                carouselStates[section] += direction;
+                
+                // Loop around
+                if (carouselStates[section] < 0) {
+                    carouselStates[section] = totalSlides - 1;
+                } else if (carouselStates[section] >= totalSlides) {
+                    carouselStates[section] = 0;
+                }
+                
+                const translateX = -carouselStates[section] * 100;
+                track.style.transform = `translateX(${translateX}%)`;
+            }
+
+            // Initialize carousels
+            document.addEventListener('DOMContentLoaded', function() {
+                const carousels = ['china', 'japan', 'korea'];
+                carousels.forEach(section => {
+                    const track = document.getElementById(section + 'Track');
+                    if (track) {
+                        track.style.transform = 'translateX(0%)';
+                    }
+                });
+            });
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+            integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    </body>
+</html>

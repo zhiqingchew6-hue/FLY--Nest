@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Tips - Fly Nest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    
+    <div class="section 1">
+            <div class="navbar-container">
+                <input type="checkbox" id="menu-toggle-input" class="menu-checkbox" />
+                <div class="navbar-header">Fly Nest</div>
+                <label for="menu-toggle-input" class="mobile-menu-icon">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <nav class="navbar-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="Foodculture.html">Food Culture</a></li>
+                        <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                        <li><a href="tips.html">Travel Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+<main class="container tips-page">
+
+    <h2 class="tips-page-title" style="margin-bottom: 40px;">Travel Basic</h2>
+
+    <div class="basic-row">
+        <div class="basic-text">
+            <h3 style="margin-bottom: 20px;">1. Before You Go</h3>
+            <p style="line-height: 1.8;">Must-have documents<br>Essential apps<br>Flight & hotel booking tips<br>Itinerary planning checklist</p>
+        </div>
+        <div class="basic-image">
+            <img src="image/tips (1).jpg" alt="Before You Go">
+        </div>
+    </div>
+
+    <div class="basic-row">
+        <div class="basic-text">
+            <h3 style="margin-bottom: 20px;">2. Travel Essentials</h3>
+            <p style="line-height: 1.8;">Packing checklist<br>Medications & daily necessities</p>
+        </div>
+        <div class="basic-image">
+            <img src="image/tips (2).jpg" alt="Travel Essentials">
+        </div>
+    </div>
+
+
+<h2 style="margin: 60px 0 30px 0;">Culture & Etiquette</h2>
+
+<div id="cultureCarousel"
+     class="carousel slide"
+     data-bs-ride="false">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <div class="culture-card">
+                        <img src="image/chinaculture2" alt="China">
+                        <div class="culture-info">
+                            <h3>China</h3>
+                            <p>About:<br>Culture & Etiquette</p>
+                            <a href="china culture.html" class="learn-more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="culture-card">
+                        <img src="image/japanculture1.jpg" alt="Japan">
+                        <div class="culture-info">
+                            <h3>Japan</h3>
+                            <p>About:<br>Culture & Etiquette</p>
+                            <a href="japan culture.html" class="learn-more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="culture-card">
+                        <img src="image/culture (3).jpg" alt="Korea">
+                        <div class="culture-info">
+                            <h3>Korea</h3>
+                            <p>About:<br>Culture & Etiquette</p>
+                            <a href="korea culture.html" class="learn-more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 右边按钮（mobile 才会出现） -->
+    <button class="carousel-control-next d-md-none"
+        type="button"
+        data-bs-target="#cultureCarousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+
+</main>
+
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content contact-modal">
+
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Contact us</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Name :</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Email :</label>
+            <input type="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Message :</label>
+            <textarea rows="4" class="form-control"></textarea>
+        </div>
+
+        <div class="submit-container">
+            <div class="submit-arrow" data-bs-dismiss="modal">➔</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+    <p>Thanks for travelling with us ♡</p>
+    <p>We collect stories, cities, and food around the world.</p>
+
+    <!-- ✅ Bootstrap trigger（外观不变） -->
+    <button class="contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+        Contact Us
+    </button>
+
+    <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+menuToggle.onclick = () => navLinks.classList.toggle('show');
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

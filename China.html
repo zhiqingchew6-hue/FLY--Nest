@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<body>
+    <header class="navbar-wrapper">
+        <div class="navbar-container">
+            <input type="checkbox" id="menu-toggle-input" class="menu-checkbox">
+            <div class="navbar-header">Fly Nest</div>
+            <label for="menu-toggle-input" class="mobile-menu-icon">
+        <span></span><span></span><span></span>
+    </label>
+            <nav class="navbar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="Foodculture.html">Food Culture</a></li>
+                    <li><a href="hotel.html">Hotels & Accommodation</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="china-banner">
+        </section>
+
+    <section class="hot-pot-content">
+        </section>
+</body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国美食文化</title> 
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="Foodculture.css" /> 
+</head>
+
+<body>
+
+    <header class="hero-banner" style="background-image:url(picture/China.jpg);">
+        <div class="banner-content">
+            <h1 style="color: #004369;">China</h1>
+        </div>
+    </header>
+
+    <main class="food-gallery">
+        
+        <section class="food-card row-reverse" id="HotPot">
+            <div class="food-details">
+                <h2 class="align-left">Hot Pot</h2>
+                <p class="align-left">Hot Pot is a traditional Chinese communal meal where diners cook raw ingredients in a simmering pot of broth placed at the center of the table. The ingredients vary, but often include thinly sliced meats, seafood, tofu, vegetables, and noodles. Broths vary from mild, savory bases to the popular, intensely flavorful, and often fiery, Chongqing-style chili broth. Diners customize their flavor with dipping sauces, often a mix of sesame oil, chili, and garlic chili sauce. Hot Pot emphasizes sharing, customization, and warmth, making it a social and interactive dining experience.</p>
+            </div>
+            <div class="food-image">
+                <img src="picture/China hot pot.webp" alt="HotPot">
+            </div>
+        </section>
+
+        <section class="food-card">
+            <div class="food-details" id="dandan">
+                <h2 class="align-left">Dan Dan Noodles</h2>
+                <p class="align-left">Dan Dan Noodles are a classic Sichuan street food known for their spicy, numbing, and savory flavor. The dish is based on a spicy chili oil sauce, often topped with crispy ground pork or beef, preserved vegetables, and crushed peanuts. The combination of the fiery chili, the unique tingling sensation from Sichuan peppercorns, and the savory meat sauce creates a rich and addictive taste. The name originates by street vendors who carried the noodles and sauce on a pole (dan dan) across their shoulders.</p>
+            </div>
+            <div class="food-image">
+                <img src="picture/China dandan.jpg" alt="Dan Dan Noodles">
+            </div>
+        </section>
+
+        <section class="food-card row-reverse" id="mapo">
+            <div class="food-details">
+                <h2 class="align-left">Mapo Tofu</h2>
+                <p class="align-left">Mapo Tofu is a famous Sichuan dish made with soft tofu, ground pork or beef, and a flavorful, spicy sauce made of fermented broad bean paste, chili, garlic, and Sichuan peppercorns. The dish is known for its “mala” flavor, which is a combination of spiciness and the numbing sensation from the peppercorns. Mapo Tofu is usually served hot and pairs perfectly with steamed rice, offering a comforting yet fiery taste that represents authentic Sichuan cuisine.</p>
+            </div>
+            <div class="food-image">
+                <img src="picture/China mapo tofu.jpg" alt="Mapo Tofu">
+            </div>
+        </section>
+
+        <section class="food-card">
+            <div class="food-details" id="Beijing">
+                <h2 class="align-left">Beijing Roast Duck</h2>
+                <p class="align-left">Beijing Roast Duck is internationally renowned, acclaimed for its crisp, golden skin and tender, juicy meat. The duck is seasoned, air-dried, and roasted in a special oven until the skin is perfectly thin and crunchy. Traditionally, the cooked duck is expertly carved table-side by the chef. Diners assemble small pancakes, crisp skin, tender meat and skin in the pancake with the condiments to create flavorful bites. Beijing Roast Duck, with its long culinary history and exquisite taste, and is often considered a culinary symbol of Beijing.</p>
+            </div>
+            <div class="food-image">
+                <img src="picture/China Kaoya.jpg" alt="Beijing Roast Duck">
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+    <p class="back-link"><a href="Foodculture.html"> back to Food Culture </a></p>
+</footer>
+    
+    <div class="modal-overlay" id="contactModal">
+            <div class="modal-box">
+                <span class="close-x" id="closeX">&times;</span>
+                <h2 class="title">Contact us</h2>
+
+                <div class="form-group">
+                    <label>Name :</label>
+                    <input type="text" id="nameInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email :</label>
+                    <input type="email" id="emailInput" />
+                </div>
+
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea rows="4" id="messageInput"></textarea>
+                </div>
+
+                <div class="submit-container">
+                    <div class="submit-arrow" id="submitAndExit">➔</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Thanks for travelling with us ♡</p>
+            <p>We collect stories, cities, and food around the world just to make your trip easier and happier.</p>
+            <button class="contact-btn" id="openContact">Contact Us</button>
+            <p class="copy-right">© 2025 By [ Fly Nest ]</p>
+        </footer>
+
+        <script>
+            const modal = document.getElementById("contactModal");
+            const openBtn = document.getElementById("openContact");
+            const closeX = document.getElementById("closeX");
+            const exitArrow = document.getElementById("submitAndExit");
+
+            openBtn.onclick = () => modal.classList.add("active");
+            closeX.onclick = () => modal.classList.remove("active");
+
+            // 点击箭头就退出
+            exitArrow.onclick = function () {
+                modal.classList.remove("active");
+                // 提交后清空，保持整洁
+                document.querySelectorAll(".form-group input, .form-group textarea").forEach((el) => (el.value = ""));
+            };
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+            integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    
+    <div
+        class="modal fade"
+        id="ContactUsModal"
+        tabindex="-1"
+        aria-labelledby="ContactUsModalLabel"
+        aria-hidden="true"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border: none; background-color: transparent">
+                <div class="modal-body" style="background-color: #a8dbdc; padding: 40px; border-radius: 0">
+                    <div
+                        class="modal-header"
+                        style="
+                            border-bottom: none;
+                            padding: 0 0 30px 0;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        ">
+                        <h5
+                            class="modal-title"
+                            id="ContactUsModalLabel"
+                            style="color: #004369; font-size: 1.8em; font-weight: bold">
+                            Contact us
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            style="filter: invert(10%)"></button>
+                    </div>
+
+                    <form id="ContactForm">
+                        <div class="mb-4">
+                            <label
+                                for="Name"
+                                class="form-label"
+                                style="color: #004369; font-weight: normal; margin-bottom: 5px"
+                                >Name :</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="Name"
+                                style="background-color: #fff8ee; border: none; padding: 15px; height: 50px" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label
+                                for="Email"
+                                class="form-label"
+                                style="color: #004369; font-weight: normal; margin-bottom: 5px"
+                                >Email :</label
+                            >
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="Email"
+                                placeholder=""
+                                style="background-color: #fff8ee; border: none; padding: 15px; height: 50px" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label
+                                for="Message"
+                                class="form-label"
+                                style="color: #04369c; font-weight: normal; margin-bottom: 5px"
+                                >Message:</label
+                            >
+                            <textarea
+                                class="form-control"
+                                id="Message"
+                                rows="5"
+                                style="
+                                    background-color: #fff8ee;
+                                    border: none;
+                                    padding: 15px;
+                                    min-height: 200px;
+                                    resize: none;
+                                "></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

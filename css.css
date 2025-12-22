@@ -1,0 +1,1017 @@
+:root {
+    --navy: #004369;   
+    --cream: #FFF8EE;   
+    --teal: #A8DBDC;    
+    --sky: #CCEFF7;     
+}
+
+/* ================== 全局 ================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    color: var(--navy);
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif; /* 全局段落默认 Lato 16px */
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.title{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+/* ================== Header ================== */
+
+.section\ 1 { /* 注意：HTML中使用了空格，但CSS中通常需要转义或使用更安全的类名 */
+    width: 100%;
+}
+/* 如果上面不工作，使用更强的选择器或直接针对 .navbar-container */
+
+.navbar-container {
+    background-color: #CCEFF7; 
+    width: 100%; /* 确保它占据父元素的全部宽度 */
+    height: 180px;
+    text-align: center;
+}
+.navbar-header {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 60px; 
+    font-weight: 700;
+    color: #004369; 
+    margin-bottom: 40px;
+}
+.navbar-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.navbar-links a {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 24px; 
+    font-weight: 500; 
+    color: #004369; 
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    border-radius: 30px;
+}
+.navbar-links a:hover {
+    background-color: #A8DBDC;
+    cursor: pointer;
+}
+.navbar-links a:active {
+    background-color: #A8DBDC; 
+}
+#menu-toggle-input {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    /* 强制 Header 高度 */
+    .navbar-container {
+        height: 80px !important;
+        background-color: #CCEFF7;
+        position: relative; /* 关键：让按钮相对于这里定位 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 隐藏 Checkbox */
+    .menu-checkbox {
+        display: none;
+    }
+
+    /* 标题样式 */
+    .navbar-header {
+        font-size: 32px !important;
+        margin: 0 !important;
+        color: #004369;
+    }
+
+    /* 重新定位三横线按钮到右上角 */
+    .mobile-menu-icon {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        right: 20px; /* 距离右边 20px */
+        top: 30px; /* 距离顶部 30px，手动对齐标题 */
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .mobile-menu-icon span {
+        width: 100%;
+        height: 3px;
+        background-color: #004369;
+        border-radius: 3px;
+    }
+
+    /* 侧边菜单样式 */
+    .navbar-links {
+        display: none; /* 默认隐藏 */
+        position: absolute;
+        top: 80px; /* 紧贴 Header 下方 */
+        right: 0;
+        width: 50%; /* 占据右侧一半 */
+        background-color: #CCEFF7;
+        z-index: 1001;
+        box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 当 Checkbox 被勾选时显示菜单 */
+    .menu-checkbox:checked ~ .navbar-links {
+        display: block !important;
+    }
+
+    /* 菜单内部列表垂直排列 */
+    .navbar-links ul {
+        flex-direction: column !important;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .navbar-links li {
+        width: 100%;
+    }
+
+    .navbar-links a {
+        display: block;
+        padding: 15px 20px;
+        text-align: left;
+        color: #004369;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    /* 1. 缩小 Fly Nest 字体 */
+    .navbar-header {
+        font-size: 26px !important; /* 从 32px 降到 26px，显得更精致 */
+        font-weight: 700;
+        color: #004369;
+    }
+
+    /* 2. 菜单链接的 Hover 效果 */
+    .navbar-links a {
+        display: block;
+        padding: 15px 20px;
+        color: #004369;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease; /* 让变色更平滑 */
+    }
+
+    /* 当鼠标指着（Hover）或者点击（Active）时变色 */
+    .navbar-links a:hover {
+        background-color: #A8DBDC; /* 变成浅蓝色，匹配你之前的设计 */
+        color: #004369;
+    }
+}
+
+/* --- 桌面端样式 (电脑) --- */
+@media screen and (min-width: 769px) {
+    /* 确保电脑端的标题大小适中 */
+    .navbar-header {
+        font-size: 50px; 
+    }
+
+    /* 电脑端导航链接的 Hover 效果 */
+    .navbar-links a:hover {
+        background-color: #A8DBDC;
+        color: #004369;
+    }
+    .mobile-menu-icon {
+        display: none;
+    }
+}
+
+
+/* ================== Section 背景统一 ================== */
+section, .section2, .tips-section-container, .travel, .hotel, .food-section {
+    background-color: var(--cream);
+    min-height: 400px;
+}
+
+/* ================== Carousel ================== */
+.section1, .carousel-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    width: 400%; 
+    height: 600px;
+    animation: slide-show 15s infinite ease-in-out; 
+}
+
+.carousel-slide {
+    width: 25%; 
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+@keyframes slide-show {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; } 
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; } 
+    95% { margin-left: -300%; }
+    100% { margin-left: 0; }
+}
+
+/* ================== Main Container ================== */
+.container {
+    padding: 60px 8%;
+    background-color: var(--cream); /* 显式声明背景色 */
+    max-width: 100% !important;    /* 覆盖 Bootstrap 的固定宽度限制 */
+}
+
+/* ================== Section 基本 ================== */
+
+
+h2 {
+    font-size: 30px;  /* 小标题统一 Montserrat 30px */
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    color: var(--navy);
+}
+
+.section-desc {
+     font-size: 16px; /* 段落统一 Lato 16px */
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    color: var(--navy);
+}
+
+/* ================== Travel ================== */
+.travel .section-text h2 {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    color: var(--navy);
+}
+
+.travel .section-text p {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--navy);
+    margin-bottom: 40px;   
+}
+
+.travel-display {
+    display: flex;
+    gap: 20px;
+    height: 500px;
+}
+
+.travel-main { flex: 1.5; }
+.travel-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.travel-display img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.travel-side img {
+    height: calc(50% - 10px);
+}
+
+/* ================== Hotel ================== */
+.hotel-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.hotel-info { flex: 1; }
+.hotel-viewport {
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.hotel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hotel-img {
+    min-width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hotel-info h2 {
+    color: var(--navy);
+}
+
+.hotel-info p {
+    color: var(--navy);
+}
+
+
+.nav-arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ================== Food ================== */
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background-color: var(--teal);
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.food-info { 
+    padding: 20px; 
+    text-align: left; 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--navy);
+}
+
+.food-info h3 { 
+    font-size: 24px;   /* 小标题 Montserrat 30px */
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px; 
+    color: var(--navy);
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+
+.food-info p { 
+    font-size: 16px;   /* 段落 Lato 16px */
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5; 
+    opacity: 0.9; 
+    color: var(--navy);
+}
+.food-info a{
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+.food-into li{
+    list-style: none;
+}
+
+.tips-glass-box a{
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    color: var(--navy);
+}
+.tips-glass-box li{
+    list-style: none;
+}
+
+/* ================== Tips ================== */
+.tips-section-container {
+    background-color: var(--cream);
+    padding: 0 8% 100px 8%; /* 统一底部间距 */
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+.tips-image-wrapper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: var(--cream);
+}
+
+.tips-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tips-glass-box {
+        position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: rgba(168, 219, 220, 0.3); 
+    width: 350px;
+    padding: 30px;
+    border-radius: 25px;
+    color: var(--navy);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+/* ================== Footer ================== */
+footer {
+    background-color: var(--sky);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--navy);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+/* ================== Contact Button ================== */
+.contact-btn {
+    background-color: var(--teal);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: var(--navy);
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+/* ================== Modal ================== */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+    background-color: var(--teal);
+    width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    color: var(--navy);
+}
+
+
+.close-x {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 30px; cursor: pointer;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+.form-group input,
+.form-group textarea {
+    background-color: var(--cream);
+    color: var(--teal);
+}
+
+
+.submit-container { display: flex; justify-content: flex-end; margin-top: 10px; }
+.submit-arrow {
+    width: 40px; height: 40px; border: 2px solid var(--navy); border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 20px;
+}
+
+.modal-content {
+    background-color: var(--teal) !important;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: var(--navy);
+}
+
+@media screen and (max-width: 768px) {
+    .modal-box {
+        width: 90%;        /* 占屏幕 90% */
+        padding: 20px;     /* 缩小内边距 */
+    }
+}
+/* ================== Contact Modal 标题 ================== */
+.contact-modal .modal-title {
+    text-align: center;       /* 标题居中 */
+    color: var(--navy);       /* 文字颜色 */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+/* ================== Contact Modal 表单文字 ================== */
+.contact-modal .form-group label,
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    color: var(--navy);       /* 全部文字颜色改为 --navy */
+}
+
+/* ================== Contact Modal 输入框背景调整（可选） ================== */
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    background-color: var(--cream);  /* 背景保持浅色 */
+}
+.contact-modal .modal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* ================== Responsive ================== */
+/* ================== Responsive ================== */
+@media screen and (max-width: 768px) {
+    /* Culture grid 调整为单列 */
+    .culture-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    /* Header 调整 */
+    header { 
+        padding: 15px 20px; 
+    }
+    header .logo { 
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px; 
+        margin-bottom: 0; 
+    }
+
+    /* 菜单切换按钮 */
+    .menu-toggle { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 5px; 
+        position: absolute; 
+        right: 20px; 
+        top: 25px; 
+        z-index: 1001; 
+        cursor: pointer; 
+    }
+    .menu-toggle span { 
+        display: block; 
+        width: 25px; 
+        height: 3px; 
+        background-color: var(--navy); 
+    }
+
+    /* 导航栏隐藏并调整样式 */
+    nav { 
+        display: none; 
+    }
+    .nav-links { 
+        display: none; 
+        flex-direction: column; 
+        background-color: var(--sky); 
+        width: 100%; 
+        text-align: left; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        z-index: 1000; 
+    }
+    .nav-links.show { 
+        display: flex; 
+    }
+    .nav-links a { 
+        padding: 15px 30px; 
+        text-decoration: none; 
+        color: var(--navy); 
+        border-bottom: 1px solid rgba(0,0,0,0.05); 
+    }
+
+    /* Travel、Hotel、Food、Basic Row 布局调整 */
+    .travel-display, 
+    .hotel-flex, 
+    .food-container, 
+    .basic-row { 
+        flex-direction: column !important; 
+        display: flex !important; 
+        height: auto !important; 
+        gap: 20px; 
+    }
+
+    /* 图片自适应 */
+    .travel-display img, 
+    .hotel-img, 
+    .food-card img, 
+    .basic-image img { 
+        width: 100% !important; 
+        height: auto !important; 
+        aspect-ratio: 1 / 1; 
+        object-fit: cover; 
+    }
+
+    /* 各个部分宽度调整 */
+    .travel-main, 
+    .travel-side, 
+    .hotel-info, 
+    .hotel-viewport, 
+    .basic-text, 
+    .basic-image { 
+        width: 100%; 
+        flex: none; 
+    }
+
+    /* Tips Glass Box 调整 */
+    .tips-glass-box { 
+        width: 90%; 
+        right: 5%; 
+        top: 10%; 
+        padding: 20px; 
+    }
+    
+}
+
+
+/* ================== Tips Page - Travel Basic ================== */
+.basic-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.basic-text {
+    flex: 1;
+}
+
+.basic-text p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.basic-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+.basic-image img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* ================== Tips Page - Culture & Etiquette ================== */
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.culture-card {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.culture-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.culture-info {
+    background-color: var(--teal);
+    padding: 20px;
+}
+
+.culture-info p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.learn-more {
+    margin-top: 10px;
+    padding: 8px 22px;
+    border-radius: 20px;
+    border: 1px solid var(--navy);
+    background: transparent;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+/* Title */
+.country-title {
+    text-align: center;
+    margin: 30px 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+/* Hero Image */
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;          /* 控制高度，像你截图 */
+    object-fit: cover;     /* 关键：贴满不变形 */
+    display: block;
+}
+
+/*China Cubalture*/
+/* Tips Section */
+
+.page {
+    background-color: var(--cream);
+    min-height: 100vh;
+}
+
+.tips-list {
+    max-width: 900px;
+    margin: 30px;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;       /* 控制 ✖ 和文字的距离 */
+    margin-bottom: 18px;
+}
+
+.cross {
+    color: red;      /* 叉号颜色 */
+    font-family: "Lato", sans-serif;
+    font-size: 16px; 
+    line-height: 1.4;
+}
+
+.tip-item p {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.back {
+    max-width: 1500px;     /* 跟内容宽度一致，看起来像照片 */
+    margin: 40px 50px;
+}
+
+.back-link {
+    display: block;
+    text-align: right;    /* 关键 */
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+
+/* ================== Travel Mobile FIX (OVERRIDE) ================== */
+@media screen and (max-width: 768px) {
+
+    /* 覆盖原本 1:1 正方形规则 */
+    .travel .travel-main img {
+        aspect-ratio: auto !important;
+        height: 200px !important;
+    }
+
+    .travel .travel-side img {
+        aspect-ratio: auto !important;
+        height: 130px !important;
+        width: 50% !important;
+    }
+
+    .travel .travel-side {
+        flex-direction: row !important;
+        gap: 15px;
+    }
+}
+
+/* Food – Bootstrap friendly */
+/* Food – image size统一 */
+.food-card img {
+    width: 100%;
+    height: 180px;        /* ✅ 所有图片同高 */
+    object-fit: cover;   /* 不变形，裁切 */
+    border-radius: 10px;
+}
+
+/* Food card 同高度 */
+.food-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-info {
+    flex: 1;                    /* 撑满剩余空间 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 768px) {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1);
+    }
+}
+
+/* ================== China / Japan / Korea CULTURE - MOBILE FIX ================== */
+@media screen and (max-width: 768px) {
+
+    /* Country title */
+    .country-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        margin: 20px 0 15px;
+    }
+
+    /* HERO IMAGE – 强制 override */
+    .hero img {
+        width: 100% !important;
+        height: 200px !important;   /* ✅ 现在一定会生效 */
+        aspect-ratio: auto !important;
+        object-fit: cover;
+    }
+
+    /* Tips list spacing */
+    .tips-list {
+        margin: 20px 24px !important;
+        max-width: 100%;
+    }
+
+    /* Each tip row */
+    .tip-item {
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .cross {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .tip-item p {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+     /* 隐藏原本文字 */
+    .back-link {
+        font-size: 0;
+    }
+
+    /* 只显示箭头 */
+    .back-link::after {
+        content: "➜";
+        font-size: 22px;
+        display: block;
+        text-align: right;
+        color: var(--navy);
+    }
+
+    /* 位置控制 */
+    .back {
+        margin: 30px 24px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* Carousel 本体 */
+    #cultureCarousel {
+        position: relative;
+    }
+
+    /* 横向滑动层 */
+    #cultureCarousel .row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    /* 每张卡片宽度 */
+    #cultureCarousel .col-12 {
+        flex: 0 0 80%;
+        max-width: 80%;
+        scroll-snap-align: start;
+    }
+
+    /* 隐藏滚动条 */
+    #cultureCarousel .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* ===== 按钮一定要在最上层 ===== */
+    #cultureCarousel .carousel-control-next,
+    #cultureCarousel .carousel-control-prev {
+        z-index: 20;
+        pointer-events: auto;
+        width: 60px;          /* 可点击区域 */
+    }
+
+    #cultureCarousel .carousel-control-next {
+        right: 0;
+    }
+
+    #cultureCarousel .carousel-control-prev {
+        left: 0;
+    }
+
+    /* ===== 关键：事件分层（不再打架） ===== */
+    #cultureCarousel .carousel-inner {
+        pointer-events: none;     /* 不挡按钮 */
+    }
+
+    #cultureCarousel .row {
+        pointer-events: auto;     /* 只负责滑 */
+    }
+
+    #cultureCarousel .carousel-control-next,
+    #cultureCarousel .carousel-control-prev {
+        pointer-events: auto;     /* 只负责点 */
+    }
+}
