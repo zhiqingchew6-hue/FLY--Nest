@@ -403,6 +403,7 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     color: var(--navy);
+    list-style-type: none;
 }
 
 .food-info h3 { 
@@ -413,6 +414,7 @@ h2 {
     text-decoration: none;
     list-style: none;
     list-style-type: none;
+    padding-left: 0;
 }
 
 .food-info p { 
@@ -429,6 +431,12 @@ h2 {
 }
 .food-into li{
     list-style: none;
+}
+.food-info ul{
+    list-style: none;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .tips-glass-box a{
@@ -771,6 +779,7 @@ footer {
     background: transparent;
     color: var(--navy);
     cursor: pointer;
+    text-decoration: none
 }
 
 /* Title */
